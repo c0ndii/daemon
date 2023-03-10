@@ -1,9 +1,15 @@
-#include <unistd.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <unistd.h>
+#include <syslog.h>
+#include <string.h>
+#include "daemon.h"
+
+
     int main(int argc, char **argv) {
     printf("Test! \n");
     if(argc<3)
@@ -21,5 +27,13 @@
         return 0;
     }
     printf("Directory \n");
+    create_deamon();
+    while (1)
+    {
+        FILE *fptr;
+        fptr = fopen("filename.txt", "w");
+        fclose(fptr);
+        sleep(30);
+    }
     return 0;
 }
