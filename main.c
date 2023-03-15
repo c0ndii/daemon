@@ -7,32 +7,101 @@
 #include <unistd.h>
 #include <syslog.h>
 #include <string.h>
+#include <dirent.h>
+#include <time.h>
 #include "daemon.h"
-
-
-    int main(int argc, char **argv) {
-    printf("Test! \n");
-    if(argc<3)
-    {
-        printf("Za mało argumentów \n");
-        return -1; 
+#include "copy.h"
+int main(int argc, char *argv[]) {
+    if(argc<3){
+        printf("Podano mniej niz 2 argumenty\n");
+        return 1;
     }
-    struct stat buf1;
-    struct stat buf2;
-    stat(argv[1],&buf1);
-    stat(argv[2],&buf2);
-    if(!S_ISDIR(buf1.st_mode) || !S_ISDIR(buf2.st_mode))
-    {
-        printf("Not Directory \n");
-        return 0;
+    struct stat buffer1;
+    struct stat buffer2;
+    stat(argv[1], &buffer1);
+    stat(argv[2], &buffer2);
+    if(!S_ISDIR(buffer1.st_mode) || !S_ISDIR(buffer2.st_mode)){
+        printf("Jeden lub oba parametry nie wskazuja na folder lub nie istnieja\n");
+        return 1;
     }
-    printf("Directory \n");
+    //tu juz powinno kopiowac w petli
+    
+    int strLenSource = strlen(argv[1]); //dlugosc path folderu source
+    int strLenDest = strlen(argv[2]); //dlugosc path folderu destination
+    char *dirSourcePath = (char *)malloc((strLenSource+1)*sizeof(char)); //alkowanie pamieci
+    char *dirDestPath = (char *)malloc((strLenDest+1)*sizeof(char));
+    strcpy(dirSourcePath, argv[1]); strcpy(dirDestPath, argv[2]); //kopiowanie zawartosci argv do stringow
+    strcat(dirSourcePath, "/");strcat(dirDestPath, "/"); //dodawanie / zeby podac od razu nazwe pliku jako caly path
+    strLenSource = strlen(dirSourcePath); //aktualizacja dlugosci do obslugi plikow
+    strLenDest = strlen(dirDestPath);
+    FILE *logs;
+    time_t rawtime;
+    struct tm * timeinfo;
+    size_t bytes;
     create_deamon();
     while (1)
     {
-        FILE *fptr;
-        fptr = fopen("filename.txt", "w");
-        fclose(fptr);
+        time(&rawtime);
+        timeinfo = localtime(&rawtime);
+        logs = fopen("logs.txt","w+");
+        DIR *toread = opendir(argv[1]);
+        DIR *tosync = opendir(argv[2]);
+        struct dirent *in;
+        if(toread == NULL){
+            fprintf(logs,"%sNie udalo sie otworzyc pierwszego folderu\n",asctime(timeinfo));
+            return 1;
+        }
+        if(tosync == NULL){
+            fprintf(logs,"%sNie udalo sie otworzyc drugiego folderu\n",asctime(timeinfo));
+            return 1;
+        }
+        while((in = readdir(toread)) != NULL){
+        if(in->d_type == DT_DIR){
+            continue;
+        }
+        char *fileSourcePath = (char*)malloc((strLenSource+1)*sizeof(char));
+        strcpy(fileSourcePath, dirSourcePath);strcat(fileSourcePath, in->d_name);
+        char *fileDestPath = (char*)malloc((strLenDest+1)*sizeof(char));
+        strcpy(fileDestPath, dirDestPath);strcat(fileDestPath, in->d_name);
+
+        if(access(fileDestPath, F_OK)==0){  //jesli istnieje to trzeba porownac daty
+            struct stat inputFileAttrib;
+            struct stat outputFileAttrib;
+            stat(fileSourcePath, &inputFileAttrib);
+            stat(fileDestPath, &outputFileAttrib);
+            if(copyOrNot(inputFileAttrib, outputFileAttrib)==1)
+            {
+                if(copyFile(fileSourcePath,fileDestPath)==-1)
+                {
+                    fprintf(logs,"%sNie udało się skopiować plików\n",asctime(timeinfo));
+                }
+            }
+            chmod(fileDestPath, inputFileAttrib.st_mode);
+
+
+        } else {   //jesli nie istnieje to tworzymy
+            if(copyFile(fileSourcePath,fileDestPath)==-1)
+            {
+                fprintf(logs,"%sNie udało się skopiować plików\n",asctime(timeinfo));
+            }
+            struct stat inputFileAttrib;
+            struct stat outputFileAttrib;
+            stat(fileSourcePath, &inputFileAttrib);
+            stat(fileDestPath, &outputFileAttrib);
+            chmod(fileDestPath, inputFileAttrib.st_mode);
+        }
+        free(fileSourcePath);  //zwalniamy pamiec zeby wczytac nastepna nazwe pliku
+        free(fileDestPath); //zwalniamy pamiec zeby wczytac nastepna nazwe pliku
+        }
+        if(closedir(toread)==-1){
+            fprintf(logs,"%sBlad podczas zamykania pliku nr1\n",asctime(timeinfo));
+            return 1;
+        }
+        if(closedir(tosync)==-1){
+            fprintf(logs,"%sBlad podczas zamykania pliku nr2\n",asctime(timeinfo));
+            return 1;
+        }
+        fclose(logs);
         sleep(30);
     }
     return 0;
