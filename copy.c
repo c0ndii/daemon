@@ -16,10 +16,8 @@ int copyOrNot(struct stat sourceFile, struct stat destFile){
     time_t destTime = destFile.st_mtime;
     ctime(&sourceTime);ctime(&destTime);
     if(sourceTime > destTime){
-        printf("Trzeba kopiowac\n");
         return 1;
     }
-    printf("Nie trzeba kopiowac\n");
     return 0;
 }
 int copyFile(char *fileSourcePath, char *fileDestPath)
