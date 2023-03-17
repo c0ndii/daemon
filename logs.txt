@@ -1,0 +1,4 @@
+Fri Mar 17 08:46:21 2023
+Jeden lub oba parametry nie wskazuja na folder lub nie istnieja
+Fri Mar 17 08:46:35 2023
+Jeden lub oba parametry nie wskazuja na folder lub nie istnieja
