@@ -1,4 +1,82 @@
-Fri Mar 17 08:46:21 2023
-Jeden lub oba parametry nie wskazuja na folder lub nie istnieja
-Fri Mar 17 08:46:35 2023
-Jeden lub oba parametry nie wskazuja na folder lub nie istnieja
+---------------------------------------------------------
+Tue Mar 21 18:30:00 2023
+Powstanie nowego Deamona
+Tue Mar 21 18:30:00 2023
+Wybudzenie Deamona
+Tue Mar 21 18:30:00 2023
+Skopiowanie pliku ww.txt się powiodło
+Tue Mar 21 18:30:00 2023
+Skopiowanie pliku nowy.txt się powiodło
+Tue Mar 21 18:30:00 2023
+Skopiowanie pliku w1.txt się powiodło
+Tue Mar 21 18:30:00 2023
+Skopiowanie pliku plik_test1 się powiodło
+Tue Mar 21 18:30:00 2023
+Skopiowanie pliku witam.txt się powiodło
+Tue Mar 21 18:30:00 2023
+Skopiowanie pliku w2.txt się powiodło
+Tue Mar 21 18:30:00 2023
+Uśpienie Deamona
+Tue Mar 21 18:30:30 2023
+Wybudzenie Deamona
+Tue Mar 21 18:30:30 2023
+Skopiowanie pliku ww.txt się powiodło
+Tue Mar 21 18:30:30 2023
+Skopiowanie pliku nowy.txt się powiodło
+Tue Mar 21 18:30:30 2023
+Skopiowanie pliku w1.txt się powiodło
+Tue Mar 21 18:30:30 2023
+Skopiowanie pliku plik_test1 się powiodło
+Tue Mar 21 18:30:30 2023
+Skopiowanie pliku witam.txt się powiodło
+Tue Mar 21 18:30:30 2023
+Skopiowanie pliku w2.txt się powiodło
+Tue Mar 21 18:30:30 2023
+Uśpienie Deamona
+Tue Mar 21 18:30:42 2023
+Wybudzenie deamona z wykorzystaniem SIGUSR1
+Tue Mar 21 18:30:42 2023
+Wybudzenie Deamona
+Tue Mar 21 18:30:42 2023
+Skopiowanie pliku ww.txt się powiodło
+Tue Mar 21 18:30:42 2023
+Skopiowanie pliku nowy.txt się powiodło
+Tue Mar 21 18:30:42 2023
+Skopiowanie pliku w1.txt się powiodło
+Tue Mar 21 18:30:42 2023
+Skopiowanie pliku plik_test1 się powiodło
+Tue Mar 21 18:30:42 2023
+Skopiowanie pliku witam.txt się powiodło
+Tue Mar 21 18:30:42 2023
+Skopiowanie pliku w2.txt się powiodło
+Tue Mar 21 18:30:42 2023
+Uśpienie Deamona
+---------------------------------------------------------
+Tue Mar 21 18:31:35 2023
+Powstanie nowego Deamona
+Tue Mar 21 18:31:35 2023
+Wybudzenie Deamona
+Tue Mar 21 18:31:35 2023
+Uśpienie Deamona
+Tue Mar 21 18:31:50 2023
+Wybudzenie deamona z wykorzystaniem SIGUSR1
+Tue Mar 21 18:31:50 2023
+Wybudzenie Deamona
+Tue Mar 21 18:31:50 2023
+Skopiowanie pliku ww.txt się powiodło
+Tue Mar 21 18:31:50 2023
+Skopiowanie pliku nowy.txt się powiodło
+Tue Mar 21 18:31:50 2023
+Skopiowanie pliku w1.txt się powiodło
+Tue Mar 21 18:31:50 2023
+Skopiowanie pliku plik_test1 się powiodło
+Tue Mar 21 18:31:50 2023
+Skopiowanie pliku witam.txt się powiodło
+Tue Mar 21 18:31:50 2023
+Skopiowanie pliku w2.txt się powiodło
+Tue Mar 21 18:31:50 2023
+Uśpienie Deamona
+Tue Mar 21 18:32:20 2023
+Wybudzenie Deamona
+Tue Mar 21 18:32:20 2023
+Uśpienie Deamona
