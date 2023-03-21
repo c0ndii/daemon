@@ -1,0 +1,1 @@
+void funkcja_obslugujaca_sigusr1(int numer);

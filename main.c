@@ -14,11 +14,7 @@
 #include "copy.h"
 #include "currentTime.h"
 #include "daemon_at_work.h"
-void funkcja_obslugujaca_sigusr1(int numer) {
-    FILE *logs = fopen("logs.txt","a");
-    fprintf(logs,"%sWybudzenie deamona z wykorzystaniem SIGUSR1\n",asctime(currentTime()));
-    fclose(logs);
-}
+#include "sigusr1.h"
 int main(int argc, char *argv[]) {
     FILE *logs = fopen("logs.txt","a");
     FILE *errors = fopen("errors.txt","a");
