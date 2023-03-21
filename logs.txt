@@ -134,3 +134,96 @@ Tue Mar 21 19:34:40 2023
 Skopiowanie pliku plik się powiodło
 Tue Mar 21 19:34:40 2023
 Uśpienie Deamona
+---------------------------------------------------------
+Tue Mar 21 20:50:24 2023
+Powstanie nowego Deamona
+Tue Mar 21 20:50:24 2023
+Wybudzenie Deamona
+Tue Mar 21 20:50:24 2023
+Uśpienie Deamona
+Tue Mar 21 20:50:35 2023
+Wybudzenie deamona z wykorzystaniem SIGUSR1
+Tue Mar 21 20:50:35 2023
+Wybudzenie Deamona
+Tue Mar 21 20:50:35 2023
+Uśpienie Deamona
+Tue Mar 21 20:50:36 2023
+Wybudzenie deamona z wykorzystaniem SIGUSR1
+Tue Mar 21 20:50:36 2023
+Wybudzenie Deamona
+Tue Mar 21 20:50:36 2023
+Uśpienie Deamona
+Tue Mar 21 20:50:36 2023
+Wybudzenie deamona z wykorzystaniem SIGUSR1
+Tue Mar 21 20:50:36 2023
+Wybudzenie Deamona
+Tue Mar 21 20:50:36 2023
+Uśpienie Deamona
+Tue Mar 21 20:50:37 2023
+Wybudzenie deamona z wykorzystaniem SIGUSR1
+Tue Mar 21 20:50:37 2023
+Wybudzenie Deamona
+Tue Mar 21 20:50:37 2023
+Uśpienie Deamona
+---------------------------------------------------------
+Tue Mar 21 20:53:36 2023
+Powstanie nowego Deamona
+Tue Mar 21 20:53:36 2023
+Wybudzenie Deamona
+Tue Mar 21 20:53:36 2023
+Uśpienie Deamona
+Tue Mar 21 20:53:45 2023
+Wybudzenie deamona z wykorzystaniem SIGUSR1
+Tue Mar 21 20:53:45 2023
+Wybudzenie Deamona
+Tue Mar 21 20:53:45 2023
+Uśpienie Deamona
+Tue Mar 21 20:53:46 2023
+Wybudzenie deamona z wykorzystaniem SIGUSR1
+Tue Mar 21 20:53:46 2023
+Wybudzenie Deamona
+Tue Mar 21 20:53:46 2023
+Uśpienie Deamona
+Tue Mar 21 20:54:11 2023
+Wybudzenie deamona z wykorzystaniem SIGUSR1
+Tue Mar 21 20:54:11 2023
+Wybudzenie Deamona
+Tue Mar 21 20:54:11 2023
+Usuwanie pliku plik z folderu do synchronizacji się powiodło
+Tue Mar 21 20:54:11 2023
+Uśpienie Deamona
+---------------------------------------------------------
+Tue Mar 21 20:57:22 2023
+Powstanie nowego Deamona
+Tue Mar 21 20:57:22 2023
+Wybudzenie Deamona
+Tue Mar 21 20:57:22 2023
+Usuwanie pliku plik z folderu do synchronizacji się powiodło
+Tue Mar 21 20:57:22 2023
+Uśpienie Deamona
+Tue Mar 21 20:57:32 2023
+Wybudzenie deamona z wykorzystaniem SIGUSR1
+Tue Mar 21 20:57:32 2023
+Wybudzenie Deamona
+Tue Mar 21 20:57:32 2023
+Usuwanie pliku plik z folderu do synchronizacji się powiodło
+Tue Mar 21 20:57:32 2023
+Uśpienie Deamona
+Tue Mar 21 20:57:36 2023
+Wybudzenie deamona z wykorzystaniem SIGUSR1
+Tue Mar 21 20:57:36 2023
+Wybudzenie Deamona
+Tue Mar 21 20:57:36 2023
+Usuwanie pliku plik z folderu do synchronizacji się powiodło
+Tue Mar 21 20:57:36 2023
+Uśpienie Deamona
+Tue Mar 21 20:58:00 2023
+Wybudzenie deamona z wykorzystaniem SIGUSR1
+Tue Mar 21 20:58:00 2023
+Wybudzenie Deamona
+Tue Mar 21 20:58:00 2023
+Skopiowanie pliku witam się powiodło
+Tue Mar 21 20:58:00 2023
+Usuwanie pliku plik z folderu do synchronizacji się powiodło
+Tue Mar 21 20:58:00 2023
+Uśpienie Deamona
