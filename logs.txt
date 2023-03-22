@@ -227,3 +227,20 @@ Tue Mar 21 20:58:00 2023
 Usuwanie pliku plik z folderu do synchronizacji się powiodło
 Tue Mar 21 20:58:00 2023
 Uśpienie Deamona
+---------------------------------------------------------
+Wed Mar 22 17:34:42 2023
+Powstanie nowego Deamona
+Wed Mar 22 17:34:42 2023
+Wybudzenie Deamona
+Wed Mar 22 17:34:42 2023
+Usuwanie pliku plik z folderu do synchronizacji się powiodło
+Wed Mar 22 17:34:42 2023
+Uśpienie Deamona
+Wed Mar 22 17:34:50 2023
+Wybudzenie deamona z wykorzystaniem SIGUSR1
+Wed Mar 22 17:34:50 2023
+Wybudzenie Deamona
+Wed Mar 22 17:34:50 2023
+Usuwanie pliku plik z folderu do synchronizacji się powiodło
+Wed Mar 22 17:34:50 2023
+Uśpienie Deamona
