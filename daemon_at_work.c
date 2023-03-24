@@ -43,14 +43,15 @@ void daemon_at_work(char *argv[],FILE *logs,FILE *errors,int strLenSource,int st
         char *fileDestPath = (char*)malloc((strLenDest+1)*sizeof(char));
         strcpy(fileDestPath, dirDestPath);strcat(fileDestPath, in->d_name);
         addToList(&start, in->d_name);
+        struct stat inputFileAttrib;
+        struct stat outputFileAttrib;
+        stat(fileSourcePath, &inputFileAttrib);
+        stat(fileDestPath, &outputFileAttrib);
         if(access(fileDestPath, F_OK)==0){  //jesli istnieje to trzeba porownac daty
-            struct stat inputFileAttrib;
-            struct stat outputFileAttrib;
-            stat(fileSourcePath, &inputFileAttrib);
-            stat(fileDestPath, &outputFileAttrib);
+            
             if(copyOrNot(inputFileAttrib, outputFileAttrib)==1)
             {
-                if(copyFile(fileSourcePath,fileDestPath)==-1)
+                if(copyFile(fileSourcePath,fileDestPath,argv[3],inputFileAttrib)==-1)
                 {
                     fprintf(errors,"%sNie udało się skopiować plików\n",asctime(currentTime()));
                 } else {
@@ -59,15 +60,11 @@ void daemon_at_work(char *argv[],FILE *logs,FILE *errors,int strLenSource,int st
                 }
             }
         } else {   //jesli nie istnieje to tworzymy
-            if(copyFile(fileSourcePath,fileDestPath)==-1)
+            if(copyFile(fileSourcePath,fileDestPath,argv[3],inputFileAttrib)==-1)
             {
                 fprintf(errors,"%sNie udało się skopiować plików\n",asctime(currentTime()));
             } else {
                 fprintf(logs,"%sSkopiowanie pliku %s się powiodło\n",asctime(currentTime()),in->d_name);
-                struct stat inputFileAttrib;
-                struct stat outputFileAttrib;
-                stat(fileSourcePath, &inputFileAttrib);
-                stat(fileDestPath, &outputFileAttrib);
                 chmod(fileDestPath, inputFileAttrib.st_mode);
             }
         }
