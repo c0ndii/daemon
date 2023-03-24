@@ -244,3 +244,53 @@ Wed Mar 22 17:34:50 2023
 Usuwanie pliku plik z folderu do synchronizacji się powiodło
 Wed Mar 22 17:34:50 2023
 Uśpienie Deamona
+---------------------------------------------------------
+Fri Mar 24 09:22:32 2023
+Powstanie nowego Deamona
+Fri Mar 24 09:22:32 2023
+Wybudzenie Deamona
+Fri Mar 24 09:22:32 2023
+Uśpienie Deamona
+Fri Mar 24 09:23:02 2023
+Wybudzenie Deamona
+Fri Mar 24 09:23:02 2023
+Usuwanie pliku test z folderu do synchronizacji się powiodło
+Fri Mar 24 09:23:02 2023
+Uśpienie Deamona
+Fri Mar 24 09:23:32 2023
+Wybudzenie Deamona
+Fri Mar 24 09:23:33 2023
+Usuwanie pliku test z folderu do synchronizacji się powiodło
+Fri Mar 24 09:23:33 2023
+Uśpienie Deamona
+Fri Mar 24 09:24:03 2023
+Wybudzenie Deamona
+Fri Mar 24 09:24:03 2023
+Usuwanie pliku test z folderu do synchronizacji się powiodło
+Fri Mar 24 09:24:03 2023
+Uśpienie Deamona
+Fri Mar 24 09:24:33 2023
+Wybudzenie Deamona
+Fri Mar 24 09:24:33 2023
+Usuwanie pliku test z folderu do synchronizacji się powiodło
+Fri Mar 24 09:24:33 2023
+Uśpienie Deamona
+Fri Mar 24 09:25:03 2023
+Wybudzenie Deamona
+Fri Mar 24 09:25:03 2023
+Usuwanie pliku test z folderu do synchronizacji się powiodło
+Fri Mar 24 09:25:03 2023
+Uśpienie Deamona
+---------------------------------------------------------
+Fri Mar 24 10:22:39 2023
+Powstanie nowego Deamona
+Fri Mar 24 10:22:39 2023
+Wybudzenie Deamona
+Fri Mar 24 10:22:39 2023
+Usuwanie pliku test z folderu do synchronizacji się powiodło
+Fri Mar 24 10:22:39 2023
+Uśpienie Deamona
+Fri Mar 24 10:23:09 2023
+Wybudzenie Deamona
+Fri Mar 24 10:23:09 2023
+Uśpienie Deamona

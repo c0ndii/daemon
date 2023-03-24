@@ -83,6 +83,7 @@ void daemon_at_work(char *argv[],FILE *logs,FILE *errors,int strLenSource,int st
         if(isThereThatFile(start, out->d_name)==1){
             fprintf(logs,"%sUsuwanie pliku %s z folderu do synchronizacji się powiodło\n",asctime(currentTime()),out->d_name); //jeszcze nie zrobilismy wiec nie wiemy ze sie powiodlo/ przeredagowac komentarz do logow
             //tutaj dodac usuwanko
+            unlink(fileToDel);
         }
     }
     if(closedir(toread)==-1){
