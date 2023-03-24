@@ -9,6 +9,30 @@
 #include <string.h>
 #include <dirent.h>
 #include <time.h>
+#include <sys/mman.h>
+#define PACKAGE "mmap"
+
+int copyBigFile(char *fileSourcePath, char *fileDestPath)
+{
+    int sfd, dfd;
+    char *src, *dest;
+    size_t filesize;
+    /* SOURCE */
+    sfd = open(fileSourcePath, O_RDONLY);
+    filesize = lseek(sfd, 0, SEEK_END);
+    src = mmap(NULL, filesize, PROT_READ, MAP_PRIVATE, sfd, 0);
+    /* DESTINATION */
+    dfd = open(fileDestPath, O_RDWR | O_CREAT, 0666);
+    ftruncate(dfd, filesize);
+    dest = mmap(NULL, filesize, PROT_READ | PROT_WRITE, MAP_SHARED, dfd, 0);
+    /* COPY */
+    memcpy(dest, src, filesize);
+    munmap(src, filesize);
+    munmap(dest, filesize);
+    close(sfd);
+    close(dfd);
+    return 0;
+}
 
 int copySmallFile(char *fileSourcePath, char *fileDestPath)
 {
@@ -27,6 +51,8 @@ int copySmallFile(char *fileSourcePath, char *fileDestPath)
         if(readBytes < size)
             break;
     }
+    close(infile);
+    close(outfile);
     return 0;
 }
 
@@ -46,5 +72,9 @@ int copyFile(char *fileSourcePath, char *fileDestPath, char *size, struct stat i
     if(longSize>inputFileAttrib.st_size)
     {
         return copySmallFile(fileSourcePath,fileDestPath);
+    }
+    else
+    {
+        return copyBigFile(fileSourcePath,fileDestPath);
     }
 }

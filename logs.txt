@@ -353,3 +353,36 @@ Fri Mar 24 14:04:57 2023
 Skopiowanie pliku skopiuje.txt się powiodło
 Fri Mar 24 14:04:57 2023
 Uśpienie Deamona
+---------------------------------------------------------
+Fri Mar 24 14:18:06 2023
+Powstanie nowego Deamona
+Fri Mar 24 14:18:06 2023
+Wybudzenie Deamona
+Fri Mar 24 14:18:09 2023
+Skopiowanie pliku largefile się powiodło
+Fri Mar 24 14:18:09 2023
+Uśpienie Deamona
+Fri Mar 24 14:18:39 2023
+Wybudzenie Deamona
+Fri Mar 24 14:18:39 2023
+Uśpienie Deamona
+Fri Mar 24 14:19:09 2023
+Wybudzenie Deamona
+Fri Mar 24 14:19:09 2023
+Uśpienie Deamona
+Fri Mar 24 14:19:39 2023
+Wybudzenie Deamona
+Fri Mar 24 14:19:39 2023
+Uśpienie Deamona
+Fri Mar 24 14:20:09 2023
+Wybudzenie Deamona
+Fri Mar 24 14:20:09 2023
+Uśpienie Deamona
+Fri Mar 24 14:20:39 2023
+Wybudzenie Deamona
+Fri Mar 24 14:20:39 2023
+Uśpienie Deamona
+Fri Mar 24 14:21:09 2023
+Wybudzenie Deamona
+Fri Mar 24 14:21:09 2023
+Uśpienie Deamona
