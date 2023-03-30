@@ -1,0 +1,40 @@
+Thu Mar 30 16:28:08 2023
+---------------------------------------------------------
+Thu Mar 30 16:28:08 2023
+Powstanie nowego Deamona
+Thu Mar 30 16:28:08 2023
+Wybudzenie Deamona
+Thu Mar 30 16:28:08 2023
+Wchodzenie w kopiowanie rekurencyjne katalogu: kopiuj
+    Thu Mar 30 16:28:08 2023
+    Skopiowanie pliku sie powiodlo: as
+    Thu Mar 30 16:28:08 2023
+    Wychodzenie z rekurencji
+Thu Mar 30 16:28:08 2023
+Kopiowanie rekurencyjne katalogu sie powiodlo: kopiuj
+Thu Mar 30 16:28:08 2023
+Rozpoczynanie usuwania rekurencyjnego katalogu: j
+    Thu Mar 30 16:28:08 2023
+    Wchodzenie w usuwanie rekurencyjne katalogu: a
+        Thu Mar 30 16:28:08 2023
+        Usuwanie rekurencyjne pliku sie powiodlo: a
+        Thu Mar 30 16:28:08 2023
+        Wchodzenie w usuwanie rekurencyjne katalogu: b
+            Thu Mar 30 16:28:08 2023
+            Usuwanie rekurencyjne pliku sie powiodlo: xc
+            Thu Mar 30 16:28:08 2023
+            Usuwanie katalogu: dest/j/a/b
+        Thu Mar 30 16:28:08 2023
+        Usuwanie rekurencyjne katalogu sie powiodlo: b
+        Thu Mar 30 16:28:08 2023
+        Usuwanie katalogu: dest/j/a
+    Thu Mar 30 16:28:08 2023
+    Usuwanie rekurencyjne katalogu sie powiodlo: a
+    Thu Mar 30 16:28:08 2023
+    Usuwanie rekurencyjne pliku sie powiodlo: l
+    Thu Mar 30 16:28:08 2023
+    Usuwanie katalogu: dest/j
+Thu Mar 30 16:28:08 2023
+Usuwanie rekurencyjne katalogu sie powiodlo: j
+Thu Mar 30 16:28:08 2023
+Uśpienie Deamona

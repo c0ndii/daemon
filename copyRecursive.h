@@ -1,1 +1,1 @@
-int copyRecursiveDir(char *dirSource, char *dirDest, char *argv, FILE * logs, FILE * errors, int iter);
+int copyRecursiveDir(char *dirSource, char *dirDest, char *argv, int iter);

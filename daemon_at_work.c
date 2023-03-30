@@ -14,25 +14,23 @@
 #include "currentTime.h"
 #include "deleteNotExisting.c"
 #include "copyRecursive.h"
+#include "updateTextFile.h"
 
 
-
-void daemon_at_work(char *argv[],FILE *logs,FILE *errors,int strLenSource,int strLenDest,char *dirSourcePath,char *dirDestPath)
+void daemon_at_work(char *argv[],int strLenSource,int strLenDest,char *dirSourcePath,char *dirDestPath)
 {
     doesItExists_t * start = NULL;
-    logs = fopen("logs.txt","a");
-    errors = fopen("errors.txt","a");
-    fprintf(logs,"%sWybudzenie Deamona\n",asctime(currentTime()));
+    updateTextFile("logs.txt","Wybudzenie Deamona");
     DIR *toread = opendir(argv[1]);
     DIR *tosync = opendir(argv[2]);
     struct dirent *in;
     struct dirent *out;
     if(toread == NULL){
-        fprintf(errors,"%sNie udalo sie otworzyc pierwszego folderu\n",asctime(currentTime()));
+        updateTextFile("logs.txt","Nie udalo sie otworzyc pierwszego folderu");
         return;
     }
     if(tosync == NULL){
-        fprintf(errors,"%sNie udalo sie otworzyc drugiego folderu\n",asctime(currentTime()));
+        updateTextFile("errors.txt","Nie udalo sie otworzyc drugiego folderu");
         return;
     }
     while((in = readdir(toread)) != NULL){
@@ -43,11 +41,11 @@ void daemon_at_work(char *argv[],FILE *logs,FILE *errors,int strLenSource,int st
         if(in->d_type == DT_DIR){
             if(strcmp(argv[4],"-R")==0 && strcmp(in->d_name,"..")!=0 && strcmp(in->d_name,".")!=0){
                 addToList(&start, in->d_name,1);
-                fprintf(logs,"%sWchodzenie w kopiowanie rekurencyjne katalogu %s\n",asctime(currentTime()),in->d_name);
-                if(copyRecursiveDir(fileSourcePath,fileDestPath,argv[3], logs, errors, 4)==0){
-                    fprintf(logs,"%sKopiowanie rekurencyjne katalogu %s sie powiodlo\n",asctime(currentTime()),in->d_name);
+                updateTextFileParam("logs.txt","Wchodzenie w kopiowanie rekurencyjne katalogu: ",in->d_name);
+                if(copyRecursiveDir(fileSourcePath,fileDestPath,argv[3], 4)==0){
+                    updateTextFileParam("logs.txt","Kopiowanie rekurencyjne katalogu sie powiodlo: ",in->d_name);
                 } else {
-                    fprintf(errors,"%sKopiowanie rekurencyjne katalogu %s sie nie powiodlo\n",asctime(currentTime()),in->d_name);
+                    updateTextFileParam("errors.txt","Kopiowanie rekurencyjne katalogu sie nie powiodlo: ",in->d_name);
                 }
             }
         } else {
@@ -61,18 +59,18 @@ void daemon_at_work(char *argv[],FILE *logs,FILE *errors,int strLenSource,int st
                 {
                     if(copyFile(fileSourcePath,fileDestPath,argv[3],inputFileAttrib)==-1)
                     {
-                        fprintf(errors,"%sNie udało się skopiować plików\n",asctime(currentTime()));
+                        updateTextFile("errors.txt","Nie udało się skopiować plików");
                     } else {
-                        fprintf(logs,"%sSkopiowanie pliku %s się powiodło\n",asctime(currentTime()),in->d_name);
+                        updateTextFileParam("logs.txt","Skopiowanie pliku się powiodło: ", in->d_name);
                         chmod(fileDestPath, inputFileAttrib.st_mode);
                     }
                 }
             } else {   //jesli nie istnieje to tworzymy
                 if(copyFile(fileSourcePath,fileDestPath,argv[3],inputFileAttrib)==-1)
                 {
-                    fprintf(errors,"%sNie udało się skopiować plików\n",asctime(currentTime()));
+                    updateTextFile("errors.txt","Nie udało się skopiować plików");
                 } else {
-                    fprintf(logs,"%sSkopiowanie pliku %s się powiodło\n",asctime(currentTime()),in->d_name);
+                    updateTextFileParam("logs.txt","Skopiowanie pliku się powiodło", in->d_name);
                     chmod(fileDestPath, inputFileAttrib.st_mode);
                 }
             }
@@ -84,37 +82,36 @@ void daemon_at_work(char *argv[],FILE *logs,FILE *errors,int strLenSource,int st
     while((out = readdir(tosync)) != NULL){
         char *fileToDel = (char*)malloc((strLenDest+1)*sizeof(char));
         strcpy(fileToDel, dirDestPath);strcat(fileToDel, out->d_name);
-        FILE * es = fopen("a","a");
-        fprintf(es,"\nkurwa %s",fileToDel);
-        fclose(es);
         if(out->d_type == DT_DIR){
             if(strcmp(argv[4],"-R")==0 && strcmp(out->d_name,"..")!=0 && strcmp(out->d_name,".")!=0){
                 if(isThereThatFile(start, out->d_name, 1)==1){
-                    if(deleteRecursive(fileToDel, fileToDel,fileToDel)==0){
-                        //git
+                    updateTextFileParam("logs.txt","Rozpoczynanie usuwania rekurencyjnego katalogu: ",out->d_name);
+                    if(deleteRecursive(fileToDel,4)==0){
+                        updateTextFileParam("logs.txt","Usuwanie rekurencyjne katalogu sie powiodlo: ",out->d_name);
                     } else {
-                        //blad
+                        updateTextFileParam("errors.txt","Usuwanie rekurencyjne katalogu sie nie powiodlo: ",out->d_name);
                     }
                 }
             }
         } else {
             if(isThereThatFile(start, out->d_name, 0)==1){
-                fprintf(logs,"%sUsuwanie pliku %s z folderu do synchronizacji się powiodło\n",asctime(currentTime()),out->d_name); //jeszcze nie zrobilismy wiec nie wiemy ze sie powiodlo/ przeredagowac komentarz do logow
-                //tutaj dodac usuwanko
-                unlink(fileToDel);
+                updateTextFile("logs.txt","Przystapienie do usuwania plikow");
+                if(unlink(fileToDel)==0){
+                    updateTextFileParam("logs.txt","Usuwanie plików z folderu do synchronizacji sie powiodło: ",out->d_name);
+                } else {
+                    updateTextFileParam("errors.txt","Usuwanie plików z folderu do synchronizacji sie nie powiodło: ",out->d_name);
+                }
             }
         }
     }
     if(closedir(toread)==-1){
-        fprintf(errors,"%sBlad podczas zamykania pliku nr1\n",asctime(currentTime()));
+        updateTextFile("errors.txt","Blad podczas zamykania katalogu SOURCE");
         return;
     }
     if(closedir(tosync)==-1){
-        fprintf(errors,"%sBlad podczas zamykania pliku nr2\n",asctime(currentTime()));
+        updateTextFile("errors.txt","Blad podczas zamykania katalogu DESTINATION");
         return;
     }
-    fprintf(logs,"%sUśpienie Deamona\n",asctime(currentTime()));
+    updateTextFile("logs.txt","Uśpienie Deamona");
     deleteList(&start);
-    fclose(logs);
-    fclose(errors);
 }

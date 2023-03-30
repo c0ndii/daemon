@@ -11,8 +11,7 @@
 #include <time.h>
 #include <signal.h>
 #include "currentTime.h"
+#include "updateTextFile.h"
 void funkcja_obslugujaca_sigusr1(int numer) {
-    FILE *logs = fopen("logs.txt","a");
-    fprintf(logs,"%sWybudzenie deamona z wykorzystaniem SIGUSR1\n",asctime(currentTime()));
-    fclose(logs);
+    updateTextFile("logs.txt","Wybudzenie deamona z wykorzystaniem SIGUSR1");
 }
