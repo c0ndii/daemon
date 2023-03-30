@@ -82,15 +82,27 @@ void daemon_at_work(char *argv[],FILE *logs,FILE *errors,int strLenSource,int st
 
     }
     while((out = readdir(tosync)) != NULL){
-        if(out->d_type == DT_DIR){
-            continue;
-        }
         char *fileToDel = (char*)malloc((strLenDest+1)*sizeof(char));
         strcpy(fileToDel, dirDestPath);strcat(fileToDel, out->d_name);
-        if(isThereThatFile(start, out->d_name, 0)==1){
-            fprintf(logs,"%sUsuwanie pliku %s z folderu do synchronizacji się powiodło\n",asctime(currentTime()),out->d_name); //jeszcze nie zrobilismy wiec nie wiemy ze sie powiodlo/ przeredagowac komentarz do logow
-            //tutaj dodac usuwanko
-            unlink(fileToDel);
+        FILE * es = fopen("a","a");
+        fprintf(es,"\nkurwa %s",fileToDel);
+        fclose(es);
+        if(out->d_type == DT_DIR){
+            if(strcmp(argv[4],"-R")==0 && strcmp(out->d_name,"..")!=0 && strcmp(out->d_name,".")!=0){
+                if(isThereThatFile(start, out->d_name, 1)==1){
+                    if(deleteRecursive(fileToDel, fileToDel,fileToDel)==0){
+                        //git
+                    } else {
+                        //blad
+                    }
+                }
+            }
+        } else {
+            if(isThereThatFile(start, out->d_name, 0)==1){
+                fprintf(logs,"%sUsuwanie pliku %s z folderu do synchronizacji się powiodło\n",asctime(currentTime()),out->d_name); //jeszcze nie zrobilismy wiec nie wiemy ze sie powiodlo/ przeredagowac komentarz do logow
+                //tutaj dodac usuwanko
+                unlink(fileToDel);
+            }
         }
     }
     if(closedir(toread)==-1){
