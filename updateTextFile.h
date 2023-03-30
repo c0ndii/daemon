@@ -1,0 +1,1 @@
+void updateTextFile(char *fileName,char *tekst)
