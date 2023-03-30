@@ -3,3 +3,4 @@
 program
 build.sh
 logs.txt
+errors.txt
