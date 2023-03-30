@@ -38,3 +38,15 @@ Thu Mar 30 16:28:08 2023
 Usuwanie rekurencyjne katalogu sie powiodlo: j
 Thu Mar 30 16:28:08 2023
 Uśpienie Deamona
+Thu Mar 30 17:13:12 2023
+---------------------------------------------------------
+Thu Mar 30 17:13:12 2023
+Powstanie nowego Deamona
+Thu Mar 30 17:13:12 2023
+Wybudzenie Deamona
+Thu Mar 30 17:13:12 2023
+Skopiowanie pliku się powiodłoskopiuje.txt
+Thu Mar 30 17:13:12 2023
+Skopiowanie pliku się powiodłowitam
+Thu Mar 30 17:13:12 2023
+Wchodzenie w kopiowanie rekurencyjne katalogu: Siema
