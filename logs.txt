@@ -160,3 +160,41 @@ Thu Mar 30 17:25:57 2023
 Kopiowanie rekurencyjne katalogu sie powiodlo: siema
 Thu Mar 30 17:25:57 2023
 Uśpienie Deamona
+Thu Mar 30 17:31:22 2023
+---------------------------------------------------------
+Thu Mar 30 17:31:22 2023
+Powstanie nowego Deamona
+Thu Mar 30 17:31:22 2023
+Wybudzenie Deamona
+Thu Mar 30 17:31:22 2023
+Skopiowanie pliku się powiodłoskopiuje.txt
+Thu Mar 30 17:31:22 2023
+Skopiowanie pliku się powiodłowitam
+Thu Mar 30 17:31:22 2023
+Wchodzenie w kopiowanie rekurencyjne katalogu: Siema
+Thu Mar 30 17:32:23 2023
+---------------------------------------------------------
+Thu Mar 30 17:32:23 2023
+Powstanie nowego Deamona
+Thu Mar 30 17:32:23 2023
+Wybudzenie Deamona
+Thu Mar 30 17:32:23 2023
+Wchodzenie w kopiowanie rekurencyjne katalogu: Siema
+    Thu Mar 30 17:32:23 2023
+    Skopiowanie pliku sie powiodlo: witam.txt
+    Thu Mar 30 17:32:23 2023
+    Wychodzenie z rekurencji
+Thu Mar 30 17:32:23 2023
+Kopiowanie rekurencyjne katalogu sie powiodlo: Siema
+Thu Mar 30 17:32:25 2023
+Skopiowanie pliku się powiodłolargefile
+Thu Mar 30 17:32:25 2023
+Rozpoczynanie usuwania rekurencyjnego katalogu: HEHE
+    Thu Mar 30 17:32:25 2023
+    Usuwanie rekurencyjne pliku sie powiodlo: eldoka.txt
+    Thu Mar 30 17:32:25 2023
+    Usuwanie katalogu: test2/HEHE
+Thu Mar 30 17:32:25 2023
+Usuwanie rekurencyjne katalogu sie powiodlo: HEHE
+Thu Mar 30 17:32:25 2023
+Uśpienie Deamona
