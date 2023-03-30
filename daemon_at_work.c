@@ -103,6 +103,7 @@ void daemon_at_work(char *argv[],int strLenSource,int strLenDest,char *dirSource
                 }
             }
         }
+        free(fileToDel);
     }
     if(closedir(toread)==-1){
         updateTextFile("errors.txt","Blad podczas zamykania katalogu SOURCE");
