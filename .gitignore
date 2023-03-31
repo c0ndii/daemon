@@ -2,3 +2,5 @@
 /test2
 program
 build.sh
+logs.txt
+errors.txt
