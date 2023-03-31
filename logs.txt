@@ -198,3 +198,39 @@ Thu Mar 30 17:32:25 2023
 Usuwanie rekurencyjne katalogu sie powiodlo: HEHE
 Thu Mar 30 17:32:25 2023
 Uśpienie Deamona
+Fri Mar 31 12:21:17 2023
+---------------------------------------------------------
+Fri Mar 31 12:21:17 2023
+Powstanie nowego Deamona
+Fri Mar 31 12:21:17 2023
+Wybudzenie Deamona
+Fri Mar 31 12:21:17 2023
+Skopiowanie pliku się powiodłohr.txt
+Fri Mar 31 12:21:17 2023
+Wchodzenie w kopiowanie rekurencyjne katalogu: ww
+    Fri Mar 31 12:21:17 2023
+    Skopiowanie pliku sie powiodlo: a.txt
+    Fri Mar 31 12:21:17 2023
+    Wychodzenie z rekurencji
+Fri Mar 31 12:21:17 2023
+Kopiowanie rekurencyjne katalogu sie powiodlo: ww
+Fri Mar 31 12:21:17 2023
+Rozpoczynanie usuwania rekurencyjnego katalogu: wywal
+    Fri Mar 31 12:21:17 2023
+    Usuwanie rekurencyjne pliku sie powiodlo: to tez.txt
+    Fri Mar 31 12:21:17 2023
+    Usuwanie katalogu: dest/wywal
+Fri Mar 31 12:21:17 2023
+Usuwanie rekurencyjne katalogu sie powiodlo: wywal
+Fri Mar 31 12:21:17 2023
+Uśpienie Deamona
+Fri Mar 31 12:21:47 2023
+Wybudzenie Deamona
+Fri Mar 31 12:21:47 2023
+Wchodzenie w kopiowanie rekurencyjne katalogu: ww
+    Fri Mar 31 12:21:47 2023
+    Wychodzenie z rekurencji
+Fri Mar 31 12:21:47 2023
+Kopiowanie rekurencyjne katalogu sie powiodlo: ww
+Fri Mar 31 12:21:47 2023
+Uśpienie Deamona
