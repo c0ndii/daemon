@@ -59,18 +59,18 @@ void daemon_at_work(char *argv[],int strLenSource,int strLenDest,char *dirSource
                 {
                     if(copyFile(fileSourcePath,fileDestPath,argv[3],inputFileAttrib)==-1)
                     {
-                        updateTextFile("errors.txt","Nie udało się skopiować plików");
+                        updateTextFile("errors.txt","Nie udało sie skopiowac plikow");
                     } else {
-                        updateTextFileParam("logs.txt","Skopiowanie pliku się powiodło: ", in->d_name);
+                        updateTextFileParam("logs.txt","Skopiowanie pliku sie powiodlo: ", in->d_name);
                         chmod(fileDestPath, inputFileAttrib.st_mode);
                     }
                 }
             } else {   //jesli nie istnieje to tworzymy
                 if(copyFile(fileSourcePath,fileDestPath,argv[3],inputFileAttrib)==-1)
                 {
-                    updateTextFile("errors.txt","Nie udało się skopiować plików");
+                    updateTextFile("errors.txt","Nie udalo sie skopiowac plikow");
                 } else {
-                    updateTextFileParam("logs.txt","Skopiowanie pliku się powiodło", in->d_name);
+                    updateTextFileParam("logs.txt","Skopiowanie pliku sie powiodlo: ", in->d_name);
                     chmod(fileDestPath, inputFileAttrib.st_mode);
                 }
             }
@@ -97,9 +97,9 @@ void daemon_at_work(char *argv[],int strLenSource,int strLenDest,char *dirSource
             if(isThereThatFile(start, out->d_name, 0)==1){
                 updateTextFile("logs.txt","Przystapienie do usuwania plikow");
                 if(unlink(fileToDel)==0){
-                    updateTextFileParam("logs.txt","Usuwanie plików z folderu do synchronizacji sie powiodło: ",out->d_name);
+                    updateTextFileParam("logs.txt","Usuwanie plikow z folderu do synchronizacji sie powiodlo: ",out->d_name);
                 } else {
-                    updateTextFileParam("errors.txt","Usuwanie plików z folderu do synchronizacji sie nie powiodło: ",out->d_name);
+                    updateTextFileParam("errors.txt","Usuwanie plikow z folderu do synchronizacji sie nie powiodlo: ",out->d_name);
                 }
             }
         }
@@ -113,6 +113,6 @@ void daemon_at_work(char *argv[],int strLenSource,int strLenDest,char *dirSource
         updateTextFile("errors.txt","Blad podczas zamykania katalogu DESTINATION");
         return;
     }
-    updateTextFile("logs.txt","Uśpienie Deamona");
+    updateTextFile("logs.txt","Uspienie Deamona");
     deleteList(&start);
 }
