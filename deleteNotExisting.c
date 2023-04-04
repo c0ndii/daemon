@@ -11,7 +11,6 @@ typedef struct doesItExists {
 
 int deleteRecursive(const char* dirPath, int iter){
     int checkFlag = 0;
-    int fileLen = strlen(dirPath);
     DIR *toDelete = opendir(dirPath);
     if(toDelete==NULL){
         updateTextFileRecursive("errors.txt","Nie udalo sie otworzyc katalogu", iter);
@@ -22,7 +21,8 @@ int deleteRecursive(const char* dirPath, int iter){
         if(strcmp(fileToDelete->d_name,"..")==0 || strcmp(fileToDelete->d_name,".")==0){
             continue;
         }
-        char *filePath = (char*)malloc((fileLen+1)*sizeof(char));
+        int fileLen = strlen(dirPath)+strlen(fileToDelete->d_name);
+        char *filePath = (char*)malloc((fileLen+2)*sizeof(char));
         strcpy(filePath, dirPath);strcat(filePath, "/");strcat(filePath, fileToDelete->d_name);
         if(fileToDelete->d_type == DT_DIR){
             updateTextFileRecursiveParam("logs.txt","Wchodzenie w usuwanie rekurencyjne katalogu: ", iter, fileToDelete->d_name);

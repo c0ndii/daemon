@@ -234,3 +234,29 @@ Fri Mar 31 12:21:47 2023
 Kopiowanie rekurencyjne katalogu sie powiodlo: ww
 Fri Mar 31 12:21:47 2023
 Uśpienie Deamona
+Tue Apr  4 10:10:04 2023
+---------------------------------------------------------
+Tue Apr  4 10:10:04 2023
+Powstanie nowego Deamona
+Tue Apr  4 10:10:04 2023
+Wybudzenie Deamona
+Tue Apr  4 10:10:04 2023
+Skopiowanie pliku sie powiodlo: plikbezfolderu
+Tue Apr  4 10:10:04 2023
+Wchodzenie w kopiowanie rekurencyjne katalogu: folderdokopiowania
+    Tue Apr  4 10:10:04 2023
+    Skopiowanie pliku sie powiodlo: plikdokopiowania
+    Tue Apr  4 10:10:04 2023
+    Wychodzenie z rekurencji
+Tue Apr  4 10:10:04 2023
+Kopiowanie rekurencyjne katalogu sie powiodlo: folderdokopiowania
+Tue Apr  4 10:10:04 2023
+Rozpoczynanie usuwania rekurencyjnego katalogu: folderdousuwania
+    Tue Apr  4 10:10:04 2023
+    Usuwanie rekurencyjne pliku sie powiodlo: plikdousuwania
+    Tue Apr  4 10:10:04 2023
+    Usuwanie katalogu: test2/folderdousuwania
+Tue Apr  4 10:10:04 2023
+Usuwanie rekurencyjne katalogu sie powiodlo: folderdousuwania
+Tue Apr  4 10:10:04 2023
+Uspienie Deamona

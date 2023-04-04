@@ -34,9 +34,11 @@ void daemon_at_work(char *argv[],int strLenSource,int strLenDest,char *dirSource
         return;
     }
     while((in = readdir(toread)) != NULL){
-        char *fileSourcePath = (char*)malloc((strLenSource+1)*sizeof(char));
+        int fileSourceLen = strLenSource+strlen(in->d_name);
+        int fileDestLen = strLenDest+strlen(in->d_name);
+        char *fileSourcePath = (char*)malloc((fileSourceLen+1)*sizeof(char));
         strcpy(fileSourcePath, dirSourcePath);strcat(fileSourcePath, in->d_name);
-        char *fileDestPath = (char*)malloc((strLenDest+1)*sizeof(char));
+        char *fileDestPath = (char*)malloc((fileDestLen+1)*sizeof(char));
         strcpy(fileDestPath, dirDestPath);strcat(fileDestPath, in->d_name);
         if(in->d_type == DT_DIR){
             if(strcmp(argv[4],"-R")==0 && strcmp(in->d_name,"..")!=0 && strcmp(in->d_name,".")!=0){
@@ -80,7 +82,8 @@ void daemon_at_work(char *argv[],int strLenSource,int strLenDest,char *dirSource
 
     }
     while((out = readdir(tosync)) != NULL){
-        char *fileToDel = (char*)malloc((strLenDest+1)*sizeof(char));
+        int fileDelLen = strLenDest+strlen(out->d_name);
+        char *fileToDel = (char*)malloc((fileDelLen+1)*sizeof(char));
         strcpy(fileToDel, dirDestPath);strcat(fileToDel, out->d_name);
         if(out->d_type == DT_DIR){
             if(strcmp(argv[4],"-R")==0 && strcmp(out->d_name,"..")!=0 && strcmp(out->d_name,".")!=0){

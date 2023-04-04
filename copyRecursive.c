@@ -16,8 +16,6 @@
 
 
 int copyRecursiveDir(char *dirSource, char *dirDest, char *argv, int iter){
-    int strLenSource = strlen(dirSource);
-    int strLenDest = strlen(dirDest);
     int checkFlag = 0;
     struct stat inputDir;
     struct stat outputDir;
@@ -32,9 +30,11 @@ int copyRecursiveDir(char *dirSource, char *dirDest, char *argv, int iter){
     }
     struct dirent *in;
     while((in = readdir(toread)) != NULL){
-        char *fileSourcePath = (char*)malloc((strLenSource+1)*sizeof(char));
+        int strLenSource = strlen(dirSource)+strlen(in->d_name);
+        int strLenDest = strlen(dirDest)+strlen(in->d_name);
+        char *fileSourcePath = (char*)malloc((strLenSource+2)*sizeof(char));
         strcpy(fileSourcePath, dirSource);strcat(fileSourcePath, "/");strcat(fileSourcePath, in->d_name);
-        char *fileDestPath = (char*)malloc((strLenDest+1)*sizeof(char));
+        char *fileDestPath = (char*)malloc((strLenDest+2)*sizeof(char));
         strcpy(fileDestPath, dirDest);strcat(fileDestPath, "/");strcat(fileDestPath, in->d_name);
         if(in->d_type == DT_DIR){
             if(strcmp(in->d_name,"..")!=0 && strcmp(in->d_name,".")!=0){

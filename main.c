@@ -44,18 +44,19 @@ int main(int argc, char *argv[]) {
     {
         int strLenSource = strlen(argv[1]); //dlugosc path folderu source
         int strLenDest = strlen(argv[2]); //dlugosc path folderu destination
-        char *dirSourcePath = (char *)malloc((strLenSource+1)*sizeof(char)); //alkowanie pamieci
-        char *dirDestPath = (char *)malloc((strLenDest+1)*sizeof(char));
+        char *dirSourcePath = (char *)malloc((strLenSource+2)*sizeof(char)); //alkowanie pamieci
+        char *dirDestPath = (char *)malloc((strLenDest+2)*sizeof(char));
         strcpy(dirSourcePath, argv[1]); strcpy(dirDestPath, argv[2]); //kopiowanie zawartosci argv do stringow
         strcat(dirSourcePath, "/");strcat(dirDestPath, "/"); //dodawanie / zeby podac od razu nazwe pliku jako caly path
         strLenSource = strlen(dirSourcePath); //aktualizacja dlugosci do obslugi plikow
         strLenDest = strlen(dirDestPath);
 
         daemon_at_work(argv,strLenSource,strLenDest,dirSourcePath,dirDestPath);
-        sleep(30);
-
         free(dirSourcePath);
         free(dirDestPath);
+        sleep(30);
+
+        
     }
     return 0;
 }

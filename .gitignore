@@ -5,3 +5,4 @@ build.sh
 logs.txt
 errors.txt
 *.txt
+logs.txt
