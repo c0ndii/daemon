@@ -1,3 +1,5 @@
 # deamon
 A project for SO.
-![linux-daemon-1](https://user-images.githubusercontent.com/49248797/227341463-bb5a5e80-06ad-489b-b4c8-b0de215ae4d7.png)
+<br>
+![Mamm0nTwitchGIF](https://user-images.githubusercontent.com/49248797/230181024-0452e78f-182a-4375-96a7-e693384e2ecb.gif)
+
