@@ -14,7 +14,19 @@
 #include "currentTime.h"
 #include "updateTextFile.h"
 
-
+/**@brief
+*   Funkcja służąca do kopiowana rekursywnego wchodzenia w poszczególne katalogi, kopiowania ich oraz ich zawartości do folderu docelowego.
+@param[in] dirSource
+*   ścieżka źródłowa
+@param[in] dirDest
+*   ścieżka docelowa
+@param[in] argv
+*   parametry wejściowe
+@param[in] iter
+*   służy do robienia wcięć w tekście
+@retval 1 wystąpił błąd podczas procesu kopiowania
+@retval checkFlag zmienna przechowywująca informacje czy wystąpił błąd
+*/
 int copyRecursiveDir(char *dirSource, char *dirDest, char *argv, int iter){
     int checkFlag = 0;
     struct stat inputDir;

@@ -11,7 +11,14 @@
 #include <time.h>
 #include <sys/mman.h>
 #define PACKAGE "mmap"
-
+/**@brief
+*   Funkcja służąca do kopiowana dużych plików, to czy plik jest wystarczająco duży do używania tej funckcji ustala użytkownik. 
+@param[in] fileSourcePath
+*   ścieżka do pliku źródłowego
+@param[in] fileDestPath
+*   ścieżka do pliku docelowego
+@retval 0 jest zwracane w przypadku sukcesu   
+*/
 int copyBigFile(char *fileSourcePath, char *fileDestPath)
 {
     int sfd, dfd;
@@ -33,7 +40,15 @@ int copyBigFile(char *fileSourcePath, char *fileDestPath)
     close(dfd);
     return 0;
 }
-
+/**@brief
+*   Funkcja służąca do kopiowana małych plików, to czy plik jest mały ustala użytkownik. 
+@param[in] fileSourcePath
+*   ścieżka do pliku źródłowego
+@param[in] fileDestPath
+*   ścieżka do pliku docelowego
+@retval 0 jest zwracane w przypadku sukcesu   
+@retval -1 jest zwracane w przypadku błędu
+*/
 int copySmallFile(char *fileSourcePath, char *fileDestPath)
 {
     int size=16384;
@@ -55,7 +70,14 @@ int copySmallFile(char *fileSourcePath, char *fileDestPath)
     close(outfile);
     return 0;
 }
-
+/**@brief
+*   Funkcja służąca do sprawdzania potrzeby kopiowania pliku, tzn. czy plik z folderu docelowego nie jest nowszy niż plik z folderu źródłowego. 
+@param[in] sourceFile
+*   struktura przechowująca metadane pliku źródłowego
+@param[in] destFile
+*   struktura przechowująca metadane pliku docelowego
+@retval 0 jest zwracane w przypadku sukcesu   
+*/
 int copyOrNot(struct stat sourceFile, struct stat destFile){
     time_t sourceTime = sourceFile.st_mtime;
     time_t destTime = destFile.st_mtime;
@@ -65,7 +87,19 @@ int copyOrNot(struct stat sourceFile, struct stat destFile){
     }
     return 0;
 }
-
+/**@brief
+*   Funkcja służąca do sprawdzenia rozmiaru pliku, i przekierowania do prawidłowej funkcji. 
+@param[in] fileSourcePath
+*   ścieżka do pliku źródłowego
+@param[in] fileDestPath
+*  ścieżka do pliku docelowego
+@param[in] size
+*   wielkość określona przez użytkownika dzieląca pliki na małe i duże
+@param[in] inputFileAttrib
+*   struktura przechowująca metadane pliku
+@retval copySmallFile jest zwracane w przypadku gdy plik zostaje oznaczony jako mały
+@retval copyBigFile jest zwracane w przypadku gdy plik zostaje oznaczony jako duży   
+*/
 int copyFile(char *fileSourcePath, char *fileDestPath, char *size, struct stat inputFileAttrib)
 {
     long longSize = atol(size);

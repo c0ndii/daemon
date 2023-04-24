@@ -1,0 +1,104 @@
+\hypertarget{update_text_file_8c}{}\doxysection{C\+:/\+Users/user/\+Desktop/daemon/update\+Text\+File.c File Reference}
+\label{update_text_file_8c}\index{C:/Users/user/Desktop/daemon/updateTextFile.c@{C:/Users/user/Desktop/daemon/updateTextFile.c}}
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$syslog.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$dirent.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}current\+Time.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{update_text_file_8c_a8e2e6f0d32c5fd93d6a5e7a57b374173}{update\+Text\+File}} (const char $\ast$file\+Name, const char $\ast$text)
+\begin{DoxyCompactList}\small\item\em Funkcja dodająca tekst do wybranego pliku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{update_text_file_8c_a67c183b2aca731049f365fc3649bb556}{update\+Text\+File\+Param}} (const char $\ast$file\+Name, const char $\ast$text, const char $\ast$param)
+\begin{DoxyCompactList}\small\item\em Funkcja dodająca tekst do wybranego pliku z użyciem zmiennej. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{update_text_file_8c_ac38361d2576ce77e69dbb2111c9be546}{update\+Text\+File\+Recursive}} (const char $\ast$file\+Name, const char $\ast$text, int iter)
+\begin{DoxyCompactList}\small\item\em Funkcja dodająca tekst rekurencyjnie do wybranego pliku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{update_text_file_8c_aa635a76a836d27b4ce60710e1f7a1f7e}{update\+Text\+File\+Recursive\+Param}} (const char $\ast$file\+Name, const char $\ast$text, int iter, const char $\ast$param)
+\begin{DoxyCompactList}\small\item\em Funkcja dodająca tekst rekurencyjnie do wybranego pliku z użyciem zmiennej. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{update_text_file_8c_a8e2e6f0d32c5fd93d6a5e7a57b374173}\label{update_text_file_8c_a8e2e6f0d32c5fd93d6a5e7a57b374173}} 
+\index{updateTextFile.c@{updateTextFile.c}!updateTextFile@{updateTextFile}}
+\index{updateTextFile@{updateTextFile}!updateTextFile.c@{updateTextFile.c}}
+\doxysubsubsection{\texorpdfstring{updateTextFile()}{updateTextFile()}}
+{\footnotesize\ttfamily void update\+Text\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{const char $\ast$}]{text }\end{DoxyParamCaption})}
+
+
+
+Funkcja dodająca tekst do wybranego pliku. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Name} & nazwa pliku do którego dodajemy tekst \\
+\hline
+\mbox{\texttt{ in}}  & {\em text} & Tekst który dodajemy do pliku \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{update_text_file_8c_a67c183b2aca731049f365fc3649bb556}\label{update_text_file_8c_a67c183b2aca731049f365fc3649bb556}} 
+\index{updateTextFile.c@{updateTextFile.c}!updateTextFileParam@{updateTextFileParam}}
+\index{updateTextFileParam@{updateTextFileParam}!updateTextFile.c@{updateTextFile.c}}
+\doxysubsubsection{\texorpdfstring{updateTextFileParam()}{updateTextFileParam()}}
+{\footnotesize\ttfamily void update\+Text\+File\+Param (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{const char $\ast$}]{text,  }\item[{const char $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+Funkcja dodająca tekst do wybranego pliku z użyciem zmiennej. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Name} & nazwa pliku do którego dodajemy tekst \\
+\hline
+\mbox{\texttt{ in}}  & {\em text} & Tekst który dodajemy do pliku \\
+\hline
+\mbox{\texttt{ in}}  & {\em param} & Zmienna przechowywująca nazwy plików lub katalogów \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{update_text_file_8c_ac38361d2576ce77e69dbb2111c9be546}\label{update_text_file_8c_ac38361d2576ce77e69dbb2111c9be546}} 
+\index{updateTextFile.c@{updateTextFile.c}!updateTextFileRecursive@{updateTextFileRecursive}}
+\index{updateTextFileRecursive@{updateTextFileRecursive}!updateTextFile.c@{updateTextFile.c}}
+\doxysubsubsection{\texorpdfstring{updateTextFileRecursive()}{updateTextFileRecursive()}}
+{\footnotesize\ttfamily void update\+Text\+File\+Recursive (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{const char $\ast$}]{text,  }\item[{int}]{iter }\end{DoxyParamCaption})}
+
+
+
+Funkcja dodająca tekst rekurencyjnie do wybranego pliku. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Name} & nazwa pliku do którego dodajemy tekst \\
+\hline
+\mbox{\texttt{ in}}  & {\em text} & Tekst który dodajemy do pliku \\
+\hline
+\mbox{\texttt{ in}}  & {\em iter} & służy do robienia wcięć w tekście @ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{update_text_file_8c_aa635a76a836d27b4ce60710e1f7a1f7e}\label{update_text_file_8c_aa635a76a836d27b4ce60710e1f7a1f7e}} 
+\index{updateTextFile.c@{updateTextFile.c}!updateTextFileRecursiveParam@{updateTextFileRecursiveParam}}
+\index{updateTextFileRecursiveParam@{updateTextFileRecursiveParam}!updateTextFile.c@{updateTextFile.c}}
+\doxysubsubsection{\texorpdfstring{updateTextFileRecursiveParam()}{updateTextFileRecursiveParam()}}
+{\footnotesize\ttfamily void update\+Text\+File\+Recursive\+Param (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{const char $\ast$}]{text,  }\item[{int}]{iter,  }\item[{const char $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+Funkcja dodająca tekst rekurencyjnie do wybranego pliku z użyciem zmiennej. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Name} & nazwa pliku do którego dodajemy tekst \\
+\hline
+\mbox{\texttt{ in}}  & {\em text} & Tekst który dodajemy do pliku \\
+\hline
+\mbox{\texttt{ in}}  & {\em param} & Zmienna przechowywująca nazwy plików lub katalogów \\
+\hline
+\mbox{\texttt{ in}}  & {\em iter} & służy do robienia wcięć w tekście \\
+\hline
+\end{DoxyParams}

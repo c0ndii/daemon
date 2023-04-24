@@ -1,14 +1,33 @@
 #include <stdio.h>
 #include <string.h>
 #include "updateTextFile.h"
-
+/**@brief
+*   Struktura przechowywująca wszystkie pliki które znajdują się w folderze źródłowym z uwzględnieniem podziału na foldery oraz pliki.
+*/
 typedef struct doesItExists {
+    /**@brief
+*   Przechowuje informacje o nazwie pliku lub katalogu
+*/
     char name[32];
+        /**@brief
+*   Przechowuje informacje o tym czy element jest katalogiem
+*/
     int isDir;
+    /**@brief
+*   Wzkaźnik na następny element 
+*/
     struct doesItExists * next;
 } doesItExists_t;
 
-
+/**@brief
+*   Funkcja usuwająca rekurencyjnie
+@param[in] dirPath
+*   scieżka folderu do usunięcia
+@param[in] iter
+*   służy do robienia wcięć w tekście
+@retval 1 Zwracane w przypadku błędu który możemy podejrzeć w errors.txt
+@retval checkFlag zmienna przechowywująca informacje czy wystąpił błąd
+*/
 int deleteRecursive(const char* dirPath, int iter){
     int checkFlag = 0;
     DIR *toDelete = opendir(dirPath);
@@ -54,7 +73,16 @@ int deleteRecursive(const char* dirPath, int iter){
     }
     return checkFlag;
 }
-
+/**@brief
+*   Funkcja dodająca nazwy plików i folderów do struktury "doesItExists"
+@param[in] start
+*   początek listy
+@param[in] name
+*   nazwa pliku lub katalogu
+@param[in] dirFlag
+*   ustala rodzaj tzn. czy jest folderem
+@retval '' Pusty return nie informuje o błędzie
+*/
 void addToList(doesItExists_t **start, const char* name, int dirFlag){
     if(*start ==NULL){
         *start = (doesItExists_t*)malloc(sizeof(doesItExists_t));
@@ -73,7 +101,11 @@ void addToList(doesItExists_t **start, const char* name, int dirFlag){
     }
     return;
 }
-
+/**@brief
+*   Wyczyszczenie listy
+@param[in] start
+*   początek listy
+*/
 void deleteList(doesItExists_t** start)
 {
     doesItExists_t* current = (*start);
@@ -85,7 +117,17 @@ void deleteList(doesItExists_t** start)
     }
     *start = NULL;
 }
-
+/**@brief
+*   Sprawdza czy podany plik lub katalog jest na liście
+@param[in] start
+*   początek listy
+@param[in] name
+*   nazwa pliku lub katalogu
+@param[in] dirFlag
+*   ustala rodzaj tzn. czy jest folderem
+@retval 1 Plik nie został znaleziony
+@retval 0 Plik został znaleziony
+*/
 int isThereThatFile(doesItExists_t *start, char* name, int dirFlag){
     doesItExists_t* current = start;
     while(current!=NULL){

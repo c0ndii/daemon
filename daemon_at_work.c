@@ -16,7 +16,20 @@
 #include "copyRecursive.h"
 #include "updateTextFile.h"
 
-
+/**@brief
+*   Funkcja wywyływana przez demona.
+@param[in] argv
+*   parametry wejściowe
+@param[in] strLenSource
+*   długość ścieżki pliku źródłowego
+@param[in] strLenDest
+*   długość ścieżki pliku docelowego
+@param[in] dirSourcePath
+*   scieżka pliku źródłowego
+@param[in] dirDestPath
+*   scieżka pliku docelowego
+@retval '' Pusty return występuje w wypadku błędu który możemy podejrzeć w pliku "errors.txt"
+*/
 void daemon_at_work(char *argv[],int strLenSource,int strLenDest,char *dirSourcePath,char *dirDestPath)
 {
     doesItExists_t * start = NULL;

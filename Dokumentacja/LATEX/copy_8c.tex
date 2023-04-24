@@ -1,0 +1,142 @@
+\hypertarget{copy_8c}{}\doxysection{C\+:/\+Users/user/\+Desktop/daemon/copy.c File Reference}
+\label{copy_8c}\index{C:/Users/user/Desktop/daemon/copy.c@{C:/Users/user/Desktop/daemon/copy.c}}
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$syslog.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$dirent.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{copy_8c_aca8570fb706c81df371b7f9bc454ae03}{PACKAGE}}~\char`\"{}mmap\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{copy_8c_a28de2747fc78c689e52f67e8fa81fd98}{copy\+Big\+File}} (char $\ast$file\+Source\+Path, char $\ast$file\+Dest\+Path)
+\begin{DoxyCompactList}\small\item\em Funkcja służąca do kopiowana dużych plików, to czy plik jest wystarczająco duży do używania tej funckcji ustala użytkownik. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{copy_8c_a1adf9698128be94972c8bce3ca0aeb24}{copy\+Small\+File}} (char $\ast$file\+Source\+Path, char $\ast$file\+Dest\+Path)
+\begin{DoxyCompactList}\small\item\em Funkcja służąca do kopiowana małych plików, to czy plik jest mały ustala użytkownik. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{copy_8c_acb3343fd5d860c8f3cc5a8aaf9f168d1}{copy\+Or\+Not}} (struct stat source\+File, struct stat dest\+File)
+\begin{DoxyCompactList}\small\item\em Funkcja służąca do sprawdzania potrzeby kopiowania pliku, tzn. czy plik z folderu docelowego nie jest nowszy niż plik z folderu źródłowego. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{copy_8c_ae70389ab2d4e2a96615fe20b3da5c4cf}{copy\+File}} (char $\ast$file\+Source\+Path, char $\ast$file\+Dest\+Path, char $\ast$size, struct stat input\+File\+Attrib)
+\begin{DoxyCompactList}\small\item\em Funkcja służąca do sprawdzenia rozmiaru pliku, i przekierowania do prawidłowej funkcji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{copy_8c_aca8570fb706c81df371b7f9bc454ae03}\label{copy_8c_aca8570fb706c81df371b7f9bc454ae03}} 
+\index{copy.c@{copy.c}!PACKAGE@{PACKAGE}}
+\index{PACKAGE@{PACKAGE}!copy.c@{copy.c}}
+\doxysubsubsection{\texorpdfstring{PACKAGE}{PACKAGE}}
+{\footnotesize\ttfamily \#define PACKAGE~\char`\"{}mmap\char`\"{}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{copy_8c_a28de2747fc78c689e52f67e8fa81fd98}\label{copy_8c_a28de2747fc78c689e52f67e8fa81fd98}} 
+\index{copy.c@{copy.c}!copyBigFile@{copyBigFile}}
+\index{copyBigFile@{copyBigFile}!copy.c@{copy.c}}
+\doxysubsubsection{\texorpdfstring{copyBigFile()}{copyBigFile()}}
+{\footnotesize\ttfamily int copy\+Big\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Source\+Path,  }\item[{char $\ast$}]{file\+Dest\+Path }\end{DoxyParamCaption})}
+
+
+
+Funkcja służąca do kopiowana dużych plików, to czy plik jest wystarczająco duży do używania tej funckcji ustala użytkownik. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Source\+Path} & ścieżka do pliku źródłowego \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+Dest\+Path} & ścieżka do pliku docelowego \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & jest zwracane w przypadku sukcesu ~\newline
+ \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{copy_8c_ae70389ab2d4e2a96615fe20b3da5c4cf}\label{copy_8c_ae70389ab2d4e2a96615fe20b3da5c4cf}} 
+\index{copy.c@{copy.c}!copyFile@{copyFile}}
+\index{copyFile@{copyFile}!copy.c@{copy.c}}
+\doxysubsubsection{\texorpdfstring{copyFile()}{copyFile()}}
+{\footnotesize\ttfamily int copy\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Source\+Path,  }\item[{char $\ast$}]{file\+Dest\+Path,  }\item[{char $\ast$}]{size,  }\item[{struct stat}]{input\+File\+Attrib }\end{DoxyParamCaption})}
+
+
+
+Funkcja służąca do sprawdzenia rozmiaru pliku, i przekierowania do prawidłowej funkcji. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Source\+Path} & ścieżka do pliku źródłowego \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+Dest\+Path} & ścieżka do pliku docelowego \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & wielkość określona przez użytkownika dzieląca pliki na małe i duże \\
+\hline
+\mbox{\texttt{ in}}  & {\em input\+File\+Attrib} & struktura przechowująca metadane pliku \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em copy\+Small\+File} & jest zwracane w przypadku gdy plik zostaje oznaczony jako mały \\
+\hline
+{\em copy\+Big\+File} & jest zwracane w przypadku gdy plik zostaje oznaczony jako duży ~\newline
+ \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{copy_8c_acb3343fd5d860c8f3cc5a8aaf9f168d1}\label{copy_8c_acb3343fd5d860c8f3cc5a8aaf9f168d1}} 
+\index{copy.c@{copy.c}!copyOrNot@{copyOrNot}}
+\index{copyOrNot@{copyOrNot}!copy.c@{copy.c}}
+\doxysubsubsection{\texorpdfstring{copyOrNot()}{copyOrNot()}}
+{\footnotesize\ttfamily int copy\+Or\+Not (\begin{DoxyParamCaption}\item[{struct stat}]{source\+File,  }\item[{struct stat}]{dest\+File }\end{DoxyParamCaption})}
+
+
+
+Funkcja służąca do sprawdzania potrzeby kopiowania pliku, tzn. czy plik z folderu docelowego nie jest nowszy niż plik z folderu źródłowego. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em source\+File} & struktura przechowująca metadane pliku źródłowego \\
+\hline
+\mbox{\texttt{ in}}  & {\em dest\+File} & struktura przechowująca metadane pliku docelowego \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & jest zwracane w przypadku sukcesu ~\newline
+ \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{copy_8c_a1adf9698128be94972c8bce3ca0aeb24}\label{copy_8c_a1adf9698128be94972c8bce3ca0aeb24}} 
+\index{copy.c@{copy.c}!copySmallFile@{copySmallFile}}
+\index{copySmallFile@{copySmallFile}!copy.c@{copy.c}}
+\doxysubsubsection{\texorpdfstring{copySmallFile()}{copySmallFile()}}
+{\footnotesize\ttfamily int copy\+Small\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Source\+Path,  }\item[{char $\ast$}]{file\+Dest\+Path }\end{DoxyParamCaption})}
+
+
+
+Funkcja służąca do kopiowana małych plików, to czy plik jest mały ustala użytkownik. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Source\+Path} & ścieżka do pliku źródłowego \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+Dest\+Path} & ścieżka do pliku docelowego \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & jest zwracane w przypadku sukcesu ~\newline
+ \\
+\hline
+{\em -\/1} & jest zwracane w przypadku błędu \\
+\hline
+\end{DoxyRetVals}

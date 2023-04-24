@@ -1,0 +1,15 @@
+\hypertarget{index_Opis}{}\doxysection{Opis}\label{index_Opis}
+Demon którego głównym zadaniem jest utrzymywanie tej samej zawartości pomiędzy dwoma katalogami.~\newline
+Po podaniu katalogu źródłowego i docelowego demon rozpoczyna swoją pracę.~\newline
+Dodatkowo jest opcja aby program działał rekurencyjnie.\hypertarget{index_Inicjalizacja}{}\doxysection{Inicjalizacja}\label{index_Inicjalizacja}
+\hypertarget{index_Parametry}{}\doxysubsection{Parametry}\label{index_Parametry}
+Parametr 1\+: Folder źródłowy~\newline
+Parametr 2\+: Folder docelowy~\newline
+Parametr 3\+: Wielkość która będzie dzeliła pliki na \char`\"{}małe\char`\"{} i \char`\"{}duże\char`\"{}~\newline
+Parametr 4(opcjonalny)\+: -\/R, służy do przeszukiwania rekurencyjnego \hypertarget{index_Działanie}{}\doxysubsection{Działanie}\label{index_Działanie}
+Program działa w tle jako demon. Co 5 minut sprawdza stan folderów.~\newline
+Jeżeli został znaleziony plik który znajduje się w katalogu źródłowym, a nie ma go w docelowym, zostaje do niego skopiowany. Jeżeli plik istnieje zarówno w folderze źródłowym i docelowym zostaje sprawdzona data modyfikacji, od której zależy dalsza praca, jeżeli plik ma nowszą datę w folderze źródłowym zostaje skopiowany do folderu docelowego, w innym wypadku nic się nie dzieje Jeżeli w folderze docelowym zostaje znaleziony plik któego nie ma w folderze źródłowym zostaje on usunięty.~\newline
+Jeżeli została wybrana opcja -\/R zostają sprawdzane również katalogi, i ich zawartości, z folderów źródłowego i docelowego.~\newline
+\hypertarget{index_Autorzy}{}\doxysection{Autorzy}\label{index_Autorzy}
+Mateusz Kondraciuk~\newline
+Jakub Franciszek Modzelewski 

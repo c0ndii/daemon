@@ -1,3 +1,28 @@
+/*! \mainpage Strona główna dokumentacji Deamona
+ *
+ * \section Opis
+ *
+ * Demon którego głównym zadaniem jest utrzymywanie tej samej zawartości pomiędzy dwoma katalogami.\n
+ * Po podaniu katalogu źródłowego i docelowego demon rozpoczyna swoją pracę.\n
+ * Dodatkowo jest opcja aby program działał rekurencyjnie.
+ *
+ * \section Inicjalizacja 
+ * \subsection Parametry
+ * Parametr 1: Folder źródłowy\n
+ * Parametr 2: Folder docelowy\n
+ * Parametr 3: Wielkość która będzie dzeliła pliki na "małe" i "duże"\n
+ * Parametr 4(opcjonalny): -R, służy do przeszukiwania rekurencyjnego
+ * \subsection Działanie
+ * Program działa w tle jako demon. Co 5 minut sprawdza stan folderów.\n
+ * Jeżeli został znaleziony plik który znajduje się w katalogu źródłowym, a nie ma go w docelowym, zostaje do niego skopiowany.
+ * Jeżeli plik istnieje zarówno w folderze źródłowym i docelowym zostaje sprawdzona data modyfikacji, od której zależy dalsza praca, jeżeli plik ma nowszą datę w folderze źródłowym zostaje skopiowany
+ * do folderu docelowego, w innym wypadku nic się nie dzieje
+ * Jeżeli w folderze docelowym zostaje znaleziony plik któego nie ma w folderze źródłowym zostaje on usunięty.\n
+ * Jeżeli została wybrana opcja -R zostają sprawdzane również katalogi, i ich zawartości, z folderów źródłowego i docelowego.\n
+ * \section Autorzy
+ * Mateusz Kondraciuk\n
+ * Jakub Franciszek Modzelewski
+ */
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <stdio.h>
@@ -16,7 +41,15 @@
 #include "daemon_at_work.h"
 #include "sigusr1.h"
 #include "updateTextFile.h"
-
+/**@brief
+*   Funkcja main rozpoczynająca działanie całego programu
+@param[in] argc
+*   Ilość parametrów wejściowych
+@param[in] argv
+*   parametry wejściowe
+@retval 1 Zwraca błąd, jego szczegóły można podejrzeć w errors.txt
+@retval 0 Kończy działanie programu
+*/
 int main(int argc, char *argv[]) {
     if(argc<3){
         updateTextFile("errors.txt","Podano mniej niz 2 argumenty");

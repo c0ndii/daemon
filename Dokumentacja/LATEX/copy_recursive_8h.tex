@@ -1,0 +1,38 @@
+\hypertarget{copy_recursive_8h}{}\doxysection{C\+:/\+Users/user/\+Desktop/daemon/copy\+Recursive.h File Reference}
+\label{copy_recursive_8h}\index{C:/Users/user/Desktop/daemon/copyRecursive.h@{C:/Users/user/Desktop/daemon/copyRecursive.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{copy_recursive_8h_a3c5cf833b18343fa1d7eb2f268bf38df}{copy\+Recursive\+Dir}} (char $\ast$dir\+Source, char $\ast$dir\+Dest, char $\ast$argv, int iter)
+\begin{DoxyCompactList}\small\item\em Funkcja służąca do kopiowana rekursywnego wchodzenia w poszczególne katalogi, kopiowania ich oraz ich zawartości do folderu docelowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{copy_recursive_8h_a3c5cf833b18343fa1d7eb2f268bf38df}\label{copy_recursive_8h_a3c5cf833b18343fa1d7eb2f268bf38df}} 
+\index{copyRecursive.h@{copyRecursive.h}!copyRecursiveDir@{copyRecursiveDir}}
+\index{copyRecursiveDir@{copyRecursiveDir}!copyRecursive.h@{copyRecursive.h}}
+\doxysubsubsection{\texorpdfstring{copyRecursiveDir()}{copyRecursiveDir()}}
+{\footnotesize\ttfamily int copy\+Recursive\+Dir (\begin{DoxyParamCaption}\item[{char $\ast$}]{dir\+Source,  }\item[{char $\ast$}]{dir\+Dest,  }\item[{char $\ast$}]{argv,  }\item[{int}]{iter }\end{DoxyParamCaption})}
+
+
+
+Funkcja służąca do kopiowana rekursywnego wchodzenia w poszczególne katalogi, kopiowania ich oraz ich zawartości do folderu docelowego. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dir\+Source} & ścieżka źródłowa \\
+\hline
+\mbox{\texttt{ in}}  & {\em dir\+Dest} & ścieżka docelowa \\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & parametry wejściowe \\
+\hline
+\mbox{\texttt{ in}}  & {\em iter} & służy do robienia wcięć w tekście \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & wystąpił błąd podczas procesu kopiowania \\
+\hline
+{\em check\+Flag} & zmienna przechowywująca informacje czy wystąpił błąd \\
+\hline
+\end{DoxyRetVals}

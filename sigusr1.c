@@ -12,6 +12,11 @@
 #include <signal.h>
 #include "currentTime.h"
 #include "updateTextFile.h"
+/**@brief
+*   Funkcja informująca iż sygnał sigusr1 został przechwycony i zostanie obsłużony
+@param[in] numer
+*   zmnienna potrzebna do prawidłowego działania kodu
+*/
 void funkcja_obslugujaca_sigusr1(int numer) {
     updateTextFile("logs.txt","Wybudzenie deamona z wykorzystaniem SIGUSR1");
 }

@@ -1,0 +1,131 @@
+\hypertarget{delete_not_existing_8c}{}\doxysection{C\+:/\+Users/user/\+Desktop/daemon/delete\+Not\+Existing.c File Reference}
+\label{delete_not_existing_8c}\index{C:/Users/user/Desktop/daemon/deleteNotExisting.c@{C:/Users/user/Desktop/daemon/deleteNotExisting.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}update\+Text\+File.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdoes_it_exists}{does\+It\+Exists}}
+\begin{DoxyCompactList}\small\item\em Struktura przechowywująca wszystkie pliki które znajdują się w folderze źródłowym z uwzględnieniem podziału na foldery oraz pliki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structdoes_it_exists}{does\+It\+Exists}} \mbox{\hyperlink{delete_not_existing_8c_a3c9401062b431ea7dd4560ab1053d466}{does\+It\+Exists\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struktura przechowywująca wszystkie pliki które znajdują się w folderze źródłowym z uwzględnieniem podziału na foldery oraz pliki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{delete_not_existing_8c_aef8022177b5bfde03d0b975b0a39b0cb}{delete\+Recursive}} (const char $\ast$dir\+Path, int iter)
+\begin{DoxyCompactList}\small\item\em Funkcja usuwająca rekurencyjnie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{delete_not_existing_8c_acd9fc70b2b081ea609eb68a6b1561e00}{add\+To\+List}} (\mbox{\hyperlink{delete_not_existing_8c_a3c9401062b431ea7dd4560ab1053d466}{does\+It\+Exists\+\_\+t}} $\ast$$\ast$start, const char $\ast$name, int dir\+Flag)
+\begin{DoxyCompactList}\small\item\em Funkcja dodająca nazwy plików i folderów do struktury \char`\"{}does\+It\+Exists\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{delete_not_existing_8c_aece38cfbf8ceb2f5131a04a343cd4a03}{delete\+List}} (\mbox{\hyperlink{delete_not_existing_8c_a3c9401062b431ea7dd4560ab1053d466}{does\+It\+Exists\+\_\+t}} $\ast$$\ast$start)
+\begin{DoxyCompactList}\small\item\em Wyczyszczenie listy. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{delete_not_existing_8c_a4d4e9b37711929bcf22dab9872acb5f4}{is\+There\+That\+File}} (\mbox{\hyperlink{delete_not_existing_8c_a3c9401062b431ea7dd4560ab1053d466}{does\+It\+Exists\+\_\+t}} $\ast$start, char $\ast$name, int dir\+Flag)
+\begin{DoxyCompactList}\small\item\em Sprawdza czy podany plik lub katalog jest na liście. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{delete_not_existing_8c_a3c9401062b431ea7dd4560ab1053d466}\label{delete_not_existing_8c_a3c9401062b431ea7dd4560ab1053d466}} 
+\index{deleteNotExisting.c@{deleteNotExisting.c}!doesItExists\_t@{doesItExists\_t}}
+\index{doesItExists\_t@{doesItExists\_t}!deleteNotExisting.c@{deleteNotExisting.c}}
+\doxysubsubsection{\texorpdfstring{doesItExists\_t}{doesItExists\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structdoes_it_exists}{does\+It\+Exists}} \mbox{\hyperlink{delete_not_existing_8c_a3c9401062b431ea7dd4560ab1053d466}{does\+It\+Exists\+\_\+t}}}
+
+
+
+Struktura przechowywująca wszystkie pliki które znajdują się w folderze źródłowym z uwzględnieniem podziału na foldery oraz pliki. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{delete_not_existing_8c_acd9fc70b2b081ea609eb68a6b1561e00}\label{delete_not_existing_8c_acd9fc70b2b081ea609eb68a6b1561e00}} 
+\index{deleteNotExisting.c@{deleteNotExisting.c}!addToList@{addToList}}
+\index{addToList@{addToList}!deleteNotExisting.c@{deleteNotExisting.c}}
+\doxysubsubsection{\texorpdfstring{addToList()}{addToList()}}
+{\footnotesize\ttfamily void add\+To\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{delete_not_existing_8c_a3c9401062b431ea7dd4560ab1053d466}{does\+It\+Exists\+\_\+t}} $\ast$$\ast$}]{start,  }\item[{const char $\ast$}]{name,  }\item[{int}]{dir\+Flag }\end{DoxyParamCaption})}
+
+
+
+Funkcja dodająca nazwy plików i folderów do struktury \char`\"{}does\+It\+Exists\char`\"{}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em start} & początek listy \\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & nazwa pliku lub katalogu \\
+\hline
+\mbox{\texttt{ in}}  & {\em dir\+Flag} & ustala rodzaj tzn. czy jest folderem \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \textquotesingle{}\textquotesingle{}} & Pusty return nie informuje o błędzie \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{delete_not_existing_8c_aece38cfbf8ceb2f5131a04a343cd4a03}\label{delete_not_existing_8c_aece38cfbf8ceb2f5131a04a343cd4a03}} 
+\index{deleteNotExisting.c@{deleteNotExisting.c}!deleteList@{deleteList}}
+\index{deleteList@{deleteList}!deleteNotExisting.c@{deleteNotExisting.c}}
+\doxysubsubsection{\texorpdfstring{deleteList()}{deleteList()}}
+{\footnotesize\ttfamily void delete\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{delete_not_existing_8c_a3c9401062b431ea7dd4560ab1053d466}{does\+It\+Exists\+\_\+t}} $\ast$$\ast$}]{start }\end{DoxyParamCaption})}
+
+
+
+Wyczyszczenie listy. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em start} & początek listy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{delete_not_existing_8c_aef8022177b5bfde03d0b975b0a39b0cb}\label{delete_not_existing_8c_aef8022177b5bfde03d0b975b0a39b0cb}} 
+\index{deleteNotExisting.c@{deleteNotExisting.c}!deleteRecursive@{deleteRecursive}}
+\index{deleteRecursive@{deleteRecursive}!deleteNotExisting.c@{deleteNotExisting.c}}
+\doxysubsubsection{\texorpdfstring{deleteRecursive()}{deleteRecursive()}}
+{\footnotesize\ttfamily int delete\+Recursive (\begin{DoxyParamCaption}\item[{const char $\ast$}]{dir\+Path,  }\item[{int}]{iter }\end{DoxyParamCaption})}
+
+
+
+Funkcja usuwająca rekurencyjnie. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dir\+Path} & scieżka folderu do usunięcia \\
+\hline
+\mbox{\texttt{ in}}  & {\em iter} & służy do robienia wcięć w tekście \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & Zwracane w przypadku błędu który możemy podejrzeć w errors.\+txt \\
+\hline
+{\em check\+Flag} & zmienna przechowywująca informacje czy wystąpił błąd \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{delete_not_existing_8c_a4d4e9b37711929bcf22dab9872acb5f4}\label{delete_not_existing_8c_a4d4e9b37711929bcf22dab9872acb5f4}} 
+\index{deleteNotExisting.c@{deleteNotExisting.c}!isThereThatFile@{isThereThatFile}}
+\index{isThereThatFile@{isThereThatFile}!deleteNotExisting.c@{deleteNotExisting.c}}
+\doxysubsubsection{\texorpdfstring{isThereThatFile()}{isThereThatFile()}}
+{\footnotesize\ttfamily int is\+There\+That\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{delete_not_existing_8c_a3c9401062b431ea7dd4560ab1053d466}{does\+It\+Exists\+\_\+t}} $\ast$}]{start,  }\item[{char $\ast$}]{name,  }\item[{int}]{dir\+Flag }\end{DoxyParamCaption})}
+
+
+
+Sprawdza czy podany plik lub katalog jest na liście. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em start} & początek listy \\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & nazwa pliku lub katalogu \\
+\hline
+\mbox{\texttt{ in}}  & {\em dir\+Flag} & ustala rodzaj tzn. czy jest folderem \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & Plik nie został znaleziony \\
+\hline
+{\em 0} & Plik został znaleziony \\
+\hline
+\end{DoxyRetVals}

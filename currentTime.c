@@ -9,7 +9,10 @@
 #include <string.h>
 #include <dirent.h>
 #include <time.h>
-
+/**@brief
+*   Funkcja służąca do pobierania aktualnego czasu.
+@retval timeinfo aktualny czas
+*/
 struct tm* currentTime()
 {
     time_t rawtime;

@@ -9,7 +9,9 @@
 #include <string.h>
 
 
-
+/**@brief
+*   Funkcja tworząca demona
+*/
 void create_deamon()
 {
     pid_t pid, sid;
