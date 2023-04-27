@@ -22,6 +22,8 @@
  * \section Autorzy
  * Mateusz Kondraciuk\n
  * Jakub Franciszek Modzelewski
+ * \section Prowadzący
+ * dr inż. Wojciech Kwedlo
  */
 #include <sys/types.h>
 #include <sys/stat.h>
