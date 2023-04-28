@@ -89,7 +89,7 @@ int main(int argc, char *argv[]) {
         daemon_at_work(argv,strLenSource,strLenDest,dirSourcePath,dirDestPath);
         free(dirSourcePath);
         free(dirDestPath);
-        sleep(30);
+        sleep(300);
 
         
     }
