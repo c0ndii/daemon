@@ -59,13 +59,15 @@ void daemon_at_work(char *argv[],int strLenSource,int strLenDest,char *dirSource
         char *fileDestPath = (char*)malloc((fileDestLen+1)*sizeof(char));
         strcpy(fileDestPath, dirDestPath);strcat(fileDestPath, in->d_name);
         if(in->d_type == DT_DIR){
-            if(strcmp(argv[4],"-R")==0 && strcmp(in->d_name,"..")!=0 && strcmp(in->d_name,".")!=0){
-                addToList(&start, in->d_name,1);
-                updateTextFileParam("logs.txt","Wchodzenie w kopiowanie rekurencyjne katalogu: ",in->d_name);
-                if(copyRecursiveDir(fileSourcePath,fileDestPath,argv[3], 4)==0){
-                    updateTextFileParam("logs.txt","Kopiowanie rekurencyjne katalogu sie powiodlo: ",in->d_name);
-                } else {
-                    updateTextFileParam("errors.txt","Kopiowanie rekurencyjne katalogu sie nie powiodlo: ",in->d_name);
+            if(argv[4]!=NULL){
+                if(strcmp(argv[4],"-R")==0 && strcmp(in->d_name,"..")!=0 && strcmp(in->d_name,".")!=0){
+                    addToList(&start, in->d_name,1);
+                    updateTextFileParam("logs.txt","Wchodzenie w kopiowanie rekurencyjne katalogu: ",in->d_name);
+                    if(copyRecursiveDir(fileSourcePath,fileDestPath,argv[3], 4)==0){
+                        updateTextFileParam("logs.txt","Kopiowanie rekurencyjne katalogu sie powiodlo: ",in->d_name);
+                    } else {
+                        updateTextFileParam("errors.txt","Kopiowanie rekurencyjne katalogu sie nie powiodlo: ",in->d_name);
+                    }
                 }
             }
         } else {
@@ -104,13 +106,15 @@ void daemon_at_work(char *argv[],int strLenSource,int strLenDest,char *dirSource
         char *fileToDel = (char*)malloc((fileDelLen+1)*sizeof(char));
         strcpy(fileToDel, dirDestPath);strcat(fileToDel, out->d_name);
         if(out->d_type == DT_DIR){
-            if(strcmp(argv[4],"-R")==0 && strcmp(out->d_name,"..")!=0 && strcmp(out->d_name,".")!=0){
-                if(isThereThatFile(start, out->d_name, 1)==1){
-                    updateTextFileParam("logs.txt","Rozpoczynanie usuwania rekurencyjnego katalogu: ",out->d_name);
-                    if(deleteRecursive(fileToDel,4)==0){
-                        updateTextFileParam("logs.txt","Usuwanie rekurencyjne katalogu sie powiodlo: ",out->d_name);
-                    } else {
-                        updateTextFileParam("errors.txt","Usuwanie rekurencyjne katalogu sie nie powiodlo: ",out->d_name);
+            if(argv[4]!=NULL){
+                if(strcmp(argv[4],"-R")==0 && strcmp(out->d_name,"..")!=0 && strcmp(out->d_name,".")!=0){
+                    if(isThereThatFile(start, out->d_name, 1)==1){
+                        updateTextFileParam("logs.txt","Rozpoczynanie usuwania rekurencyjnego katalogu: ",out->d_name);
+                        if(deleteRecursive(fileToDel,4)==0){
+                            updateTextFileParam("logs.txt","Usuwanie rekurencyjne katalogu sie powiodlo: ",out->d_name);
+                        } else {
+                            updateTextFileParam("errors.txt","Usuwanie rekurencyjne katalogu sie nie powiodlo: ",out->d_name);
+                        }
                     }
                 }
             }
