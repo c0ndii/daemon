@@ -10,6 +10,12 @@
 #include <dirent.h>
 #include <time.h>
 #include "currentTime.h"
+/**
+ * @file
+ * @brief Aktualizowanie logs.txt i errors.txt
+ *
+ * Plik służący do aktualizacji plików zawierających logi i błędy o nowe wartości.
+ */
 /**@brief
 *   Funkcja dodająca tekst do wybranego pliku
 @param[in] fileName

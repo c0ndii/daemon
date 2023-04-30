@@ -10,7 +10,16 @@
 #include <dirent.h>
 #include <time.h>
 #include <sys/mman.h>
+/**@brief
+*  W informatyce mmap jest uniksowym wywołaniem systemowym zgodnym z POSIX, które odwzorowuje pliki lub urządzenia w pamięci.
+*/
 #define PACKAGE "mmap"
+/**
+ * @file
+ * @brief Plik obsługujący kopiowanie.
+ *
+ * Plik którego funkcje dzielą pliki po rozmiarze a następnie je kopiują.
+ */
 /**@brief
 *   Funkcja służąca do kopiowana dużych plików, to czy plik jest wystarczająco duży do używania tej funckcji ustala użytkownik. 
 @param[in] fileSourcePath
@@ -76,7 +85,8 @@ int copySmallFile(char *fileSourcePath, char *fileDestPath)
 *   struktura przechowująca metadane pliku źródłowego
 @param[in] destFile
 *   struktura przechowująca metadane pliku docelowego
-@retval 0 jest zwracane w przypadku sukcesu   
+@retval 0 zwaracane jako informacja, że pliku nie należy skopiować   
+@retval 1 zwaracane jako informacja, że plik należy skopiować   
 */
 int copyOrNot(struct stat sourceFile, struct stat destFile){
     time_t sourceTime = sourceFile.st_mtime;
@@ -97,8 +107,8 @@ int copyOrNot(struct stat sourceFile, struct stat destFile){
 *   wielkość określona przez użytkownika dzieląca pliki na małe i duże
 @param[in] inputFileAttrib
 *   struktura przechowująca metadane pliku
-@retval copySmallFile jest zwracane w przypadku gdy plik zostaje oznaczony jako mały
-@retval copyBigFile jest zwracane w przypadku gdy plik zostaje oznaczony jako duży   
+@retval copySmallFile Funkcja jest zwracana w przypadku gdy plik zostaje oznaczony jako mały
+@retval copyBigFile Funkcja jest zwracana w przypadku gdy plik zostaje oznaczony jako duży   
 */
 int copyFile(char *fileSourcePath, char *fileDestPath, char *size, struct stat inputFileAttrib)
 {

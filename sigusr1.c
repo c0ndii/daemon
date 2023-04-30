@@ -12,6 +12,12 @@
 #include <signal.h>
 #include "currentTime.h"
 #include "updateTextFile.h"
+/**
+ * @file
+ * @brief Sygnał
+ *
+ * Plik obsługujący wywołanie sygnału SIGUSR1
+ */
 /**@brief
 *   Funkcja informująca iż sygnał sigusr1 został przechwycony i zostanie obsłużony
 @param[in] numer

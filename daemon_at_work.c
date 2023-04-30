@@ -15,9 +15,14 @@
 #include "deleteNotExisting.c"
 #include "copyRecursive.h"
 #include "updateTextFile.h"
-
+/**
+ * @file
+ * @brief Demon
+ *
+ * Plik posiadający jedną funkcję, która jest wywoływana przez demona, służy do sprawdzanie potrzeby kopiowania czy usuwania plików.
+ */
 /**@brief
-*   Funkcja wywyływana przez demona.
+*   Funkcja wywyływana przez demona, służy do sprawdzanie potrzeby kopiowania czy usuwania plików.
 @param[in] argv
 *   parametry wejściowe
 @param[in] strLenSource
@@ -28,7 +33,7 @@
 *   scieżka pliku źródłowego
 @param[in] dirDestPath
 *   scieżka pliku docelowego
-@retval '' Pusty return występuje w wypadku błędu który możemy podejrzeć w pliku "errors.txt"
+@retval '' Zwraca błąd, jego szczegóły można sprawdzić w pliku errors.txt
 */
 void daemon_at_work(char *argv[],int strLenSource,int strLenDest,char *dirSourcePath,char *dirDestPath)
 {

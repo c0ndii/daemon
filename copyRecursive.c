@@ -13,9 +13,14 @@
 #include "copy.h"
 #include "currentTime.h"
 #include "updateTextFile.h"
-
+/**
+ * @file
+ * @brief Kopiowanie rekurencyjne
+ *
+ * Plik posiadający jedną funkcję, której zadaniem jest kopiowanie rekurencyjne.
+ */
 /**@brief
-*   Funkcja służąca do kopiowana rekursywnego wchodzenia w poszczególne katalogi, kopiowania ich oraz ich zawartości do folderu docelowego.
+*   Funkcja służąca do kopiowana rekurencyjnego, wchodzenia w poszczególne katalogi, kopiowania ich oraz ich zawartości do folderu docelowego.
 @param[in] dirSource
 *   ścieżka źródłowa
 @param[in] dirDest
@@ -23,8 +28,8 @@
 @param[in] argv
 *   parametry wejściowe
 @param[in] iter
-*   służy do robienia wcięć w tekście
-@retval 1 wystąpił błąd podczas procesu kopiowania
+*   służy do robienia "wcięć" w dodawanym do pliku tekście
+@retval 1 Zwraca błąd, jego szczegóły można sprawdzić w pliku errors.txt
 @retval checkFlag zmienna przechowywująca informacje czy wystąpił błąd
 */
 int copyRecursiveDir(char *dirSource, char *dirDest, char *argv, int iter){
@@ -38,7 +43,7 @@ int copyRecursiveDir(char *dirSource, char *dirDest, char *argv, int iter){
     DIR *toread = opendir(dirSource);
     if(toread==NULL){
         updateTextFileRecursive("errors.txt","Nie znaleziono katalogu",iter);
-        return 1; //nie jestem pewien
+        return 1; 
     }
     struct dirent *in;
     while((in = readdir(toread)) != NULL){

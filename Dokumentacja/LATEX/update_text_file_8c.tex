@@ -1,5 +1,10 @@
-\hypertarget{update_text_file_8c}{}\doxysection{C\+:/\+Users/user/\+Desktop/daemon/update\+Text\+File.c File Reference}
+\hypertarget{update_text_file_8c}{}\doxysection{Dokumentacja pliku C\+:/\+Users/user/\+Desktop/daemon/update\+Text\+File.c}
 \label{update_text_file_8c}\index{C:/Users/user/Desktop/daemon/updateTextFile.c@{C:/Users/user/Desktop/daemon/updateTextFile.c}}
+
+
+Aktualizowanie logs.\+txt i errors.\+txt.  
+
+
 {\ttfamily \#include $<$sys/types.\+h$>$}\newline
 {\ttfamily \#include $<$sys/stat.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
@@ -12,7 +17,7 @@
 {\ttfamily \#include $<$dirent.\+h$>$}\newline
 {\ttfamily \#include $<$time.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}current\+Time.\+h\char`\"{}}\newline
-\doxysubsection*{Functions}
+\doxysubsection*{Funkcje}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{update_text_file_8c_a8e2e6f0d32c5fd93d6a5e7a57b374173}{update\+Text\+File}} (const char $\ast$file\+Name, const char $\ast$text)
@@ -25,7 +30,12 @@ void \mbox{\hyperlink{update_text_file_8c_aa635a76a836d27b4ce60710e1f7a1f7e}{upd
 \begin{DoxyCompactList}\small\item\em Funkcja dodająca tekst rekurencyjnie do wybranego pliku z użyciem zmiennej. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Function Documentation}
+\doxysubsection{Opis szczegółowy}
+Aktualizowanie logs.\+txt i errors.\+txt. 
+
+Plik służący do aktualizacji plików zawierających logi i błędy o nowe wartości. 
+
+\doxysubsection{Dokumentacja funkcji}
 \mbox{\Hypertarget{update_text_file_8c_a8e2e6f0d32c5fd93d6a5e7a57b374173}\label{update_text_file_8c_a8e2e6f0d32c5fd93d6a5e7a57b374173}} 
 \index{updateTextFile.c@{updateTextFile.c}!updateTextFile@{updateTextFile}}
 \index{updateTextFile@{updateTextFile}!updateTextFile.c@{updateTextFile.c}}
@@ -37,7 +47,7 @@ void \mbox{\hyperlink{update_text_file_8c_aa635a76a836d27b4ce60710e1f7a1f7e}{upd
 Funkcja dodająca tekst do wybranego pliku. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Parametry}
 \mbox{\texttt{ in}}  & {\em file\+Name} & nazwa pliku do którego dodajemy tekst \\
 \hline
 \mbox{\texttt{ in}}  & {\em text} & Tekst który dodajemy do pliku \\
@@ -54,7 +64,7 @@ Funkcja dodająca tekst do wybranego pliku.
 Funkcja dodająca tekst do wybranego pliku z użyciem zmiennej. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Parametry}
 \mbox{\texttt{ in}}  & {\em file\+Name} & nazwa pliku do którego dodajemy tekst \\
 \hline
 \mbox{\texttt{ in}}  & {\em text} & Tekst który dodajemy do pliku \\
@@ -73,7 +83,7 @@ Funkcja dodająca tekst do wybranego pliku z użyciem zmiennej.
 Funkcja dodająca tekst rekurencyjnie do wybranego pliku. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Parametry}
 \mbox{\texttt{ in}}  & {\em file\+Name} & nazwa pliku do którego dodajemy tekst \\
 \hline
 \mbox{\texttt{ in}}  & {\em text} & Tekst który dodajemy do pliku \\
@@ -92,7 +102,7 @@ Funkcja dodająca tekst rekurencyjnie do wybranego pliku.
 Funkcja dodająca tekst rekurencyjnie do wybranego pliku z użyciem zmiennej. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Parametry}
 \mbox{\texttt{ in}}  & {\em file\+Name} & nazwa pliku do którego dodajemy tekst \\
 \hline
 \mbox{\texttt{ in}}  & {\em text} & Tekst który dodajemy do pliku \\

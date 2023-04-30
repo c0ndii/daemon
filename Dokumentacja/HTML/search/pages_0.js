@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['strona_20główna_20dokumentacji_20deamona_0',['Strona główna dokumentacji Deamona',['../index.html',1,'']]]
+  ['instrukcja_20obsługi_0',['Instrukcja obsługi',['../page3.html',1,'']]]
 ];

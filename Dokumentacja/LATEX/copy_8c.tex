@@ -1,5 +1,10 @@
-\hypertarget{copy_8c}{}\doxysection{C\+:/\+Users/user/\+Desktop/daemon/copy.c File Reference}
+\hypertarget{copy_8c}{}\doxysection{Dokumentacja pliku C\+:/\+Users/user/\+Desktop/daemon/copy.c}
 \label{copy_8c}\index{C:/Users/user/Desktop/daemon/copy.c@{C:/Users/user/Desktop/daemon/copy.c}}
+
+
+Plik obsługujący kopiowanie.  
+
+
 {\ttfamily \#include $<$sys/types.\+h$>$}\newline
 {\ttfamily \#include $<$sys/stat.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
@@ -12,12 +17,13 @@
 {\ttfamily \#include $<$dirent.\+h$>$}\newline
 {\ttfamily \#include $<$time.\+h$>$}\newline
 {\ttfamily \#include $<$sys/mman.\+h$>$}\newline
-\doxysubsection*{Macros}
+\doxysubsection*{Definicje}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{copy_8c_aca8570fb706c81df371b7f9bc454ae03}{PACKAGE}}~\char`\"{}mmap\char`\"{}
-\end{DoxyCompactItemize}
-\doxysubsection*{Functions}
+\mbox{\Hypertarget{copy_8c_aca8570fb706c81df371b7f9bc454ae03}\label{copy_8c_aca8570fb706c81df371b7f9bc454ae03}} 
+\#define {\bfseries PACKAGE}~\char`\"{}mmap\char`\"{}
+\begin{DoxyCompactList}\small\item\em W informatyce mmap jest uniksowym wywołaniem systemowym zgodnym z POSIX, które odwzorowuje pliki lub urządzenia w pamięci. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{copy_8c_a28de2747fc78c689e52f67e8fa81fd98}{copy\+Big\+File}} (char $\ast$file\+Source\+Path, char $\ast$file\+Dest\+Path)
@@ -30,16 +36,12 @@ int \mbox{\hyperlink{copy_8c_ae70389ab2d4e2a96615fe20b3da5c4cf}{copy\+File}} (ch
 \begin{DoxyCompactList}\small\item\em Funkcja służąca do sprawdzenia rozmiaru pliku, i przekierowania do prawidłowej funkcji. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{copy_8c_aca8570fb706c81df371b7f9bc454ae03}\label{copy_8c_aca8570fb706c81df371b7f9bc454ae03}} 
-\index{copy.c@{copy.c}!PACKAGE@{PACKAGE}}
-\index{PACKAGE@{PACKAGE}!copy.c@{copy.c}}
-\doxysubsubsection{\texorpdfstring{PACKAGE}{PACKAGE}}
-{\footnotesize\ttfamily \#define PACKAGE~\char`\"{}mmap\char`\"{}}
+\doxysubsection{Opis szczegółowy}
+Plik obsługujący kopiowanie. 
 
+Plik którego funkcje dzielą pliki po rozmiarze a następnie je kopiują. 
 
-
-\doxysubsection{Function Documentation}
+\doxysubsection{Dokumentacja funkcji}
 \mbox{\Hypertarget{copy_8c_a28de2747fc78c689e52f67e8fa81fd98}\label{copy_8c_a28de2747fc78c689e52f67e8fa81fd98}} 
 \index{copy.c@{copy.c}!copyBigFile@{copyBigFile}}
 \index{copyBigFile@{copyBigFile}!copy.c@{copy.c}}
@@ -51,14 +53,14 @@ int \mbox{\hyperlink{copy_8c_ae70389ab2d4e2a96615fe20b3da5c4cf}{copy\+File}} (ch
 Funkcja służąca do kopiowana dużych plików, to czy plik jest wystarczająco duży do używania tej funckcji ustala użytkownik. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Parametry}
 \mbox{\texttt{ in}}  & {\em file\+Source\+Path} & ścieżka do pliku źródłowego \\
 \hline
 \mbox{\texttt{ in}}  & {\em file\+Dest\+Path} & ścieżka do pliku docelowego \\
 \hline
 \end{DoxyParams}
 
-\begin{DoxyRetVals}{Return values}
+\begin{DoxyRetVals}{Zwracane wartości}
 {\em 0} & jest zwracane w przypadku sukcesu ~\newline
  \\
 \hline
@@ -74,7 +76,7 @@ Funkcja służąca do kopiowana dużych plików, to czy plik jest wystarczająco
 Funkcja służąca do sprawdzenia rozmiaru pliku, i przekierowania do prawidłowej funkcji. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Parametry}
 \mbox{\texttt{ in}}  & {\em file\+Source\+Path} & ścieżka do pliku źródłowego \\
 \hline
 \mbox{\texttt{ in}}  & {\em file\+Dest\+Path} & ścieżka do pliku docelowego \\
@@ -85,10 +87,10 @@ Funkcja służąca do sprawdzenia rozmiaru pliku, i przekierowania do prawidłow
 \hline
 \end{DoxyParams}
 
-\begin{DoxyRetVals}{Return values}
-{\em copy\+Small\+File} & jest zwracane w przypadku gdy plik zostaje oznaczony jako mały \\
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em copy\+Small\+File} & Funkcja jest zwracana w przypadku gdy plik zostaje oznaczony jako mały \\
 \hline
-{\em copy\+Big\+File} & jest zwracane w przypadku gdy plik zostaje oznaczony jako duży ~\newline
+{\em copy\+Big\+File} & Funkcja jest zwracana w przypadku gdy plik zostaje oznaczony jako duży ~\newline
  \\
 \hline
 \end{DoxyRetVals}
@@ -103,15 +105,18 @@ Funkcja służąca do sprawdzenia rozmiaru pliku, i przekierowania do prawidłow
 Funkcja służąca do sprawdzania potrzeby kopiowania pliku, tzn. czy plik z folderu docelowego nie jest nowszy niż plik z folderu źródłowego. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Parametry}
 \mbox{\texttt{ in}}  & {\em source\+File} & struktura przechowująca metadane pliku źródłowego \\
 \hline
 \mbox{\texttt{ in}}  & {\em dest\+File} & struktura przechowująca metadane pliku docelowego \\
 \hline
 \end{DoxyParams}
 
-\begin{DoxyRetVals}{Return values}
-{\em 0} & jest zwracane w przypadku sukcesu ~\newline
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em 0} & zwaracane jako informacja, że pliku nie należy skopiować ~\newline
+ \\
+\hline
+{\em 1} & zwaracane jako informacja, że plik należy skopiować ~\newline
  \\
 \hline
 \end{DoxyRetVals}
@@ -126,14 +131,14 @@ Funkcja służąca do sprawdzania potrzeby kopiowania pliku, tzn. czy plik z fol
 Funkcja służąca do kopiowana małych plików, to czy plik jest mały ustala użytkownik. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Parametry}
 \mbox{\texttt{ in}}  & {\em file\+Source\+Path} & ścieżka do pliku źródłowego \\
 \hline
 \mbox{\texttt{ in}}  & {\em file\+Dest\+Path} & ścieżka do pliku docelowego \\
 \hline
 \end{DoxyParams}
 
-\begin{DoxyRetVals}{Return values}
+\begin{DoxyRetVals}{Zwracane wartości}
 {\em 0} & jest zwracane w przypadku sukcesu ~\newline
  \\
 \hline

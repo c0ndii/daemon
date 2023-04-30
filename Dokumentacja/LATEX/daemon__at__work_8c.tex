@@ -1,5 +1,10 @@
-\hypertarget{daemon__at__work_8c}{}\doxysection{C\+:/\+Users/user/\+Desktop/daemon/daemon\+\_\+at\+\_\+work.c File Reference}
+\hypertarget{daemon__at__work_8c}{}\doxysection{Dokumentacja pliku C\+:/\+Users/user/\+Desktop/daemon/daemon\+\_\+at\+\_\+work.c}
 \label{daemon__at__work_8c}\index{C:/Users/user/Desktop/daemon/daemon\_at\_work.c@{C:/Users/user/Desktop/daemon/daemon\_at\_work.c}}
+
+
+Demon.  
+
+
 {\ttfamily \#include $<$sys/types.\+h$>$}\newline
 {\ttfamily \#include $<$sys/stat.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
@@ -17,14 +22,19 @@
 {\ttfamily \#include \char`\"{}delete\+Not\+Existing.\+c\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}copy\+Recursive.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}update\+Text\+File.\+h\char`\"{}}\newline
-\doxysubsection*{Functions}
+\doxysubsection*{Funkcje}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{daemon__at__work_8c_af648ac8c5dac0d5cf21c5ee096be3978}{daemon\+\_\+at\+\_\+work}} (char $\ast$argv\mbox{[}$\,$\mbox{]}, int str\+Len\+Source, int str\+Len\+Dest, char $\ast$dir\+Source\+Path, char $\ast$dir\+Dest\+Path)
-\begin{DoxyCompactList}\small\item\em Funkcja wywyływana przez demona. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Funkcja wywyływana przez demona, służy do sprawdzanie potrzeby kopiowania czy usuwania plików. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Function Documentation}
+\doxysubsection{Opis szczegółowy}
+Demon. 
+
+Plik posiadający jedną funkcję, która jest wywoływana przez demona, służy do sprawdzanie potrzeby kopiowania czy usuwania plików. 
+
+\doxysubsection{Dokumentacja funkcji}
 \mbox{\Hypertarget{daemon__at__work_8c_af648ac8c5dac0d5cf21c5ee096be3978}\label{daemon__at__work_8c_af648ac8c5dac0d5cf21c5ee096be3978}} 
 \index{daemon\_at\_work.c@{daemon\_at\_work.c}!daemon\_at\_work@{daemon\_at\_work}}
 \index{daemon\_at\_work@{daemon\_at\_work}!daemon\_at\_work.c@{daemon\_at\_work.c}}
@@ -33,10 +43,10 @@ void \mbox{\hyperlink{daemon__at__work_8c_af648ac8c5dac0d5cf21c5ee096be3978}{dae
 
 
 
-Funkcja wywyływana przez demona. 
+Funkcja wywyływana przez demona, służy do sprawdzanie potrzeby kopiowania czy usuwania plików. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Parametry}
 \mbox{\texttt{ in}}  & {\em argv} & parametry wejściowe \\
 \hline
 \mbox{\texttt{ in}}  & {\em str\+Len\+Source} & długość ścieżki pliku źródłowego \\
@@ -49,7 +59,7 @@ Funkcja wywyływana przez demona.
 \hline
 \end{DoxyParams}
 
-\begin{DoxyRetVals}{Return values}
-{\em \textquotesingle{}\textquotesingle{}} & Pusty return występuje w wypadku błędu który możemy podejrzeć w pliku \char`\"{}errors.\+txt\char`\"{} \\
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em \textquotesingle{}\textquotesingle{}} & Zwraca błąd, jego szczegóły można sprawdzić w pliku errors.\+txt \\
 \hline
 \end{DoxyRetVals}

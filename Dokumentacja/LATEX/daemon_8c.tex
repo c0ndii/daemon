@@ -1,5 +1,10 @@
-\hypertarget{daemon_8c}{}\doxysection{C\+:/\+Users/user/\+Desktop/daemon/daemon.c File Reference}
+\hypertarget{daemon_8c}{}\doxysection{Dokumentacja pliku C\+:/\+Users/user/\+Desktop/daemon/daemon.c}
 \label{daemon_8c}\index{C:/Users/user/Desktop/daemon/daemon.c@{C:/Users/user/Desktop/daemon/daemon.c}}
+
+
+Tworzenie demona.  
+
+
 {\ttfamily \#include $<$sys/types.\+h$>$}\newline
 {\ttfamily \#include $<$sys/stat.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
@@ -9,21 +14,15 @@
 {\ttfamily \#include $<$unistd.\+h$>$}\newline
 {\ttfamily \#include $<$syslog.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
-\doxysubsection*{Functions}
+\doxysubsection*{Funkcje}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{daemon_8c_a697838fa77dbe4c226840ea091772be4}{create\+\_\+deamon}} ()
-\begin{DoxyCompactList}\small\item\em Funkcja tworząca demona. \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
-\doxysubsection{Function Documentation}
 \mbox{\Hypertarget{daemon_8c_a697838fa77dbe4c226840ea091772be4}\label{daemon_8c_a697838fa77dbe4c226840ea091772be4}} 
-\index{daemon.c@{daemon.c}!create\_deamon@{create\_deamon}}
-\index{create\_deamon@{create\_deamon}!daemon.c@{daemon.c}}
-\doxysubsubsection{\texorpdfstring{create\_deamon()}{create\_deamon()}}
-{\footnotesize\ttfamily void create\+\_\+deamon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+void {\bfseries create\+\_\+deamon} ()
+\begin{DoxyCompactList}\small\item\em Funkcja tworząca demona-\/ tworzony jest proces potomny, następnie zabijany proces \char`\"{}rodzic\char`\"{}. \char`\"{}\+Osierocony\char`\"{} proces staje się demonem. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\doxysubsection{Opis szczegółowy}
+Tworzenie demona. 
 
-Funkcja tworząca demona. 
-
+Plik posiadający funkcję która służy do tworzenia demona. 

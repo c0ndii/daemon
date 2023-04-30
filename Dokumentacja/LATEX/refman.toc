@@ -1,95 +1,79 @@
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
-\contentsline {chapter}{\numberline {1}Strona główna dokumentacji Deamona}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Opis}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Inicjalizacja}{1}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Parametry}{1}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Działanie}{1}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Autorzy}{1}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Prowadzący}{1}{section.1.4}%
-\contentsline {chapter}{\numberline {2}Data Structure Index}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Data Structures}{3}{section.2.1}%
-\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Data Structure Documentation}{7}{chapter.4}%
-\contentsline {section}{\numberline {4.1}does\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}It\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exists Struct Reference}{7}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Field Documentation}{7}{subsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.2.1}isDir}{7}{subsubsection.4.1.2.1}%
-\contentsline {subsubsection}{\numberline {4.1.2.2}name}{8}{subsubsection.4.1.2.2}%
-\contentsline {subsubsection}{\numberline {4.1.2.3}next}{8}{subsubsection.4.1.2.3}%
-\contentsline {chapter}{\numberline {5}File Documentation}{9}{chapter.5}%
-\contentsline {section}{\numberline {5.1}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/copy.c File Reference}{9}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Macro Definition Documentation}{9}{subsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.1.1}PACKAGE}{10}{subsubsection.5.1.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Function Documentation}{10}{subsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.2.1}copyBigFile()}{10}{subsubsection.5.1.2.1}%
-\contentsline {subsubsection}{\numberline {5.1.2.2}copyFile()}{10}{subsubsection.5.1.2.2}%
-\contentsline {subsubsection}{\numberline {5.1.2.3}copyOrNot()}{11}{subsubsection.5.1.2.3}%
-\contentsline {subsubsection}{\numberline {5.1.2.4}copySmallFile()}{11}{subsubsection.5.1.2.4}%
-\contentsline {section}{\numberline {5.2}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/copy.h File Reference}{12}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Function Documentation}{12}{subsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.1.1}copyBigFile()}{12}{subsubsection.5.2.1.1}%
-\contentsline {subsubsection}{\numberline {5.2.1.2}copyFile()}{12}{subsubsection.5.2.1.2}%
-\contentsline {subsubsection}{\numberline {5.2.1.3}copyOrNot()}{13}{subsubsection.5.2.1.3}%
-\contentsline {subsubsection}{\numberline {5.2.1.4}copySmallFile()}{13}{subsubsection.5.2.1.4}%
-\contentsline {section}{\numberline {5.3}copy.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{14}{section.5.3}%
-\contentsline {section}{\numberline {5.4}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/copy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Recursive.c File Reference}{14}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Function Documentation}{14}{subsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.1}copyRecursiveDir()}{14}{subsubsection.5.4.1.1}%
-\contentsline {section}{\numberline {5.5}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/copy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Recursive.h File Reference}{15}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Function Documentation}{15}{subsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.1.1}copyRecursiveDir()}{15}{subsubsection.5.5.1.1}%
-\contentsline {section}{\numberline {5.6}copy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Recursive.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.5.6}%
-\contentsline {section}{\numberline {5.7}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/current\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Time.c File Reference}{16}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Function Documentation}{16}{subsection.5.7.1}%
-\contentsline {subsubsection}{\numberline {5.7.1.1}currentTime()}{16}{subsubsection.5.7.1.1}%
-\contentsline {section}{\numberline {5.8}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/current\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Time.h File Reference}{16}{section.5.8}%
-\contentsline {subsection}{\numberline {5.8.1}Function Documentation}{17}{subsection.5.8.1}%
-\contentsline {subsubsection}{\numberline {5.8.1.1}currentTime()}{17}{subsubsection.5.8.1.1}%
-\contentsline {section}{\numberline {5.9}current\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Time.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{17}{section.5.9}%
-\contentsline {section}{\numberline {5.10}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/daemon.c File Reference}{17}{section.5.10}%
-\contentsline {subsection}{\numberline {5.10.1}Function Documentation}{17}{subsection.5.10.1}%
-\contentsline {subsubsection}{\numberline {5.10.1.1}create\_deamon()}{17}{subsubsection.5.10.1.1}%
-\contentsline {section}{\numberline {5.11}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/daemon.h File Reference}{18}{section.5.11}%
-\contentsline {subsection}{\numberline {5.11.1}Function Documentation}{18}{subsection.5.11.1}%
-\contentsline {subsubsection}{\numberline {5.11.1.1}create\_deamon()}{18}{subsubsection.5.11.1.1}%
-\contentsline {section}{\numberline {5.12}daemon.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.5.12}%
-\contentsline {section}{\numberline {5.13}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/daemon\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}at\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}work.c File Reference}{18}{section.5.13}%
-\contentsline {subsection}{\numberline {5.13.1}Function Documentation}{19}{subsection.5.13.1}%
-\contentsline {subsubsection}{\numberline {5.13.1.1}daemon\_at\_work()}{19}{subsubsection.5.13.1.1}%
-\contentsline {section}{\numberline {5.14}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/daemon\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}at\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}work.h File Reference}{19}{section.5.14}%
-\contentsline {subsection}{\numberline {5.14.1}Function Documentation}{19}{subsection.5.14.1}%
-\contentsline {subsubsection}{\numberline {5.14.1.1}daemon\_at\_work()}{19}{subsubsection.5.14.1.1}%
-\contentsline {section}{\numberline {5.15}daemon\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}at\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}work.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{20}{section.5.15}%
-\contentsline {section}{\numberline {5.16}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/delete\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Not\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Existing.c File Reference}{20}{section.5.16}%
-\contentsline {subsection}{\numberline {5.16.1}Typedef Documentation}{21}{subsection.5.16.1}%
-\contentsline {subsubsection}{\numberline {5.16.1.1}doesItExists\_t}{21}{subsubsection.5.16.1.1}%
-\contentsline {subsection}{\numberline {5.16.2}Function Documentation}{21}{subsection.5.16.2}%
-\contentsline {subsubsection}{\numberline {5.16.2.1}addToList()}{21}{subsubsection.5.16.2.1}%
-\contentsline {subsubsection}{\numberline {5.16.2.2}deleteList()}{21}{subsubsection.5.16.2.2}%
-\contentsline {subsubsection}{\numberline {5.16.2.3}deleteRecursive()}{22}{subsubsection.5.16.2.3}%
-\contentsline {subsubsection}{\numberline {5.16.2.4}isThereThatFile()}{22}{subsubsection.5.16.2.4}%
-\contentsline {section}{\numberline {5.17}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/main.c File Reference}{22}{section.5.17}%
-\contentsline {subsection}{\numberline {5.17.1}Function Documentation}{23}{subsection.5.17.1}%
-\contentsline {subsubsection}{\numberline {5.17.1.1}main()}{23}{subsubsection.5.17.1.1}%
-\contentsline {section}{\numberline {5.18}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/sigusr1.c File Reference}{23}{section.5.18}%
-\contentsline {subsection}{\numberline {5.18.1}Function Documentation}{24}{subsection.5.18.1}%
-\contentsline {subsubsection}{\numberline {5.18.1.1}funkcja\_obslugujaca\_sigusr1()}{24}{subsubsection.5.18.1.1}%
-\contentsline {section}{\numberline {5.19}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/sigusr1.h File Reference}{24}{section.5.19}%
-\contentsline {subsection}{\numberline {5.19.1}Function Documentation}{24}{subsection.5.19.1}%
-\contentsline {subsubsection}{\numberline {5.19.1.1}funkcja\_obslugujaca\_sigusr1()}{25}{subsubsection.5.19.1.1}%
-\contentsline {section}{\numberline {5.20}sigusr1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{25}{section.5.20}%
-\contentsline {section}{\numberline {5.21}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/update\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Text\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File.c File Reference}{25}{section.5.21}%
-\contentsline {subsection}{\numberline {5.21.1}Function Documentation}{25}{subsection.5.21.1}%
-\contentsline {subsubsection}{\numberline {5.21.1.1}updateTextFile()}{26}{subsubsection.5.21.1.1}%
-\contentsline {subsubsection}{\numberline {5.21.1.2}updateTextFileParam()}{26}{subsubsection.5.21.1.2}%
-\contentsline {subsubsection}{\numberline {5.21.1.3}updateTextFileRecursive()}{26}{subsubsection.5.21.1.3}%
-\contentsline {subsubsection}{\numberline {5.21.1.4}updateTextFileRecursiveParam()}{27}{subsubsection.5.21.1.4}%
-\contentsline {section}{\numberline {5.22}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/update\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Text\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File.h File Reference}{27}{section.5.22}%
-\contentsline {subsection}{\numberline {5.22.1}Function Documentation}{27}{subsection.5.22.1}%
-\contentsline {subsubsection}{\numberline {5.22.1.1}updateTextFile()}{27}{subsubsection.5.22.1.1}%
-\contentsline {subsubsection}{\numberline {5.22.1.2}updateTextFileParam()}{28}{subsubsection.5.22.1.2}%
-\contentsline {subsubsection}{\numberline {5.22.1.3}updateTextFileRecursive()}{28}{subsubsection.5.22.1.3}%
-\contentsline {subsubsection}{\numberline {5.22.1.4}updateTextFileRecursiveParam()}{28}{subsubsection.5.22.1.4}%
-\contentsline {section}{\numberline {5.23}update\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Text\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{29}{section.5.23}%
-\contentsline {chapter}{Index}{31}{section*.21}%
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{\numberline {1}Strona główna dokumentacji Demona}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Dokumentacja}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Realizacja zadania}{1}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Treść Zadania}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Wykonane podpunkty}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Podpunkty}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Główne zadanie}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Rekurencyjna synchronizacja katalogów}{5}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Rozmiar pliku}{5}{subsection.3.1.3}%
+\contentsline {chapter}{\numberline {4}Instrukcja obsługi}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Parametry podawane przy uruchamianiu programu}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Folder źródłowy}{7}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Folder docelowy}{7}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Rozmiar pliku}{7}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Rekurencyjna synchronizacja katalogów -\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R (opcjonaly)}{7}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}Przykłady}{7}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}./program source dest 1000000}{7}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}./program source dest 1000000 -\/R}{7}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {5}Indeks struktur danych}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Struktury danych}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Indeks plików}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Lista plików}{11}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Dokumentacja struktur danych}{13}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Dokumentacja struktury does\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}It\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exists}{13}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Opis szczegółowy}{13}{subsection.7.1.1}%
+\contentsline {chapter}{\numberline {8}Dokumentacja plików}{15}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/copy.c}{15}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Opis szczegółowy}{16}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Dokumentacja funkcji}{16}{subsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.2.1}copyBigFile()}{16}{subsubsection.8.1.2.1}%
+\contentsline {subsubsection}{\numberline {8.1.2.2}copyFile()}{16}{subsubsection.8.1.2.2}%
+\contentsline {subsubsection}{\numberline {8.1.2.3}copyOrNot()}{17}{subsubsection.8.1.2.3}%
+\contentsline {subsubsection}{\numberline {8.1.2.4}copySmallFile()}{17}{subsubsection.8.1.2.4}%
+\contentsline {section}{\numberline {8.2}copy.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/copy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Recursive.c}{18}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Opis szczegółowy}{18}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Dokumentacja funkcji}{18}{subsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.2.1}copyRecursiveDir()}{18}{subsubsection.8.3.2.1}%
+\contentsline {section}{\numberline {8.4}copy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Recursive.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/current\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Time.c}{19}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Opis szczegółowy}{19}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.5.2}Dokumentacja funkcji}{19}{subsection.8.5.2}%
+\contentsline {subsubsection}{\numberline {8.5.2.1}currentTime()}{20}{subsubsection.8.5.2.1}%
+\contentsline {section}{\numberline {8.6}current\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Time.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{21}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/daemon.c}{21}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Opis szczegółowy}{21}{subsection.8.7.1}%
+\contentsline {section}{\numberline {8.8}daemon.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{21}{section.8.8}%
+\contentsline {section}{\numberline {8.9}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/daemon\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}at\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}work.c}{22}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Opis szczegółowy}{22}{subsection.8.9.1}%
+\contentsline {subsection}{\numberline {8.9.2}Dokumentacja funkcji}{22}{subsection.8.9.2}%
+\contentsline {subsubsection}{\numberline {8.9.2.1}daemon\_at\_work()}{22}{subsubsection.8.9.2.1}%
+\contentsline {section}{\numberline {8.10}daemon\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}at\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}work.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{23}{section.8.10}%
+\contentsline {section}{\numberline {8.11}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/delete\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Not\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Existing.c}{23}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}Opis szczegółowy}{24}{subsection.8.11.1}%
+\contentsline {subsection}{\numberline {8.11.2}Dokumentacja funkcji}{24}{subsection.8.11.2}%
+\contentsline {subsubsection}{\numberline {8.11.2.1}addToList()}{24}{subsubsection.8.11.2.1}%
+\contentsline {subsubsection}{\numberline {8.11.2.2}deleteList()}{24}{subsubsection.8.11.2.2}%
+\contentsline {subsubsection}{\numberline {8.11.2.3}deleteRecursive()}{24}{subsubsection.8.11.2.3}%
+\contentsline {subsubsection}{\numberline {8.11.2.4}isThereThatFile()}{25}{subsubsection.8.11.2.4}%
+\contentsline {section}{\numberline {8.12}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/main.c}{25}{section.8.12}%
+\contentsline {subsection}{\numberline {8.12.1}Opis szczegółowy}{26}{subsection.8.12.1}%
+\contentsline {subsection}{\numberline {8.12.2}Dokumentacja funkcji}{26}{subsection.8.12.2}%
+\contentsline {subsubsection}{\numberline {8.12.2.1}main()}{26}{subsubsection.8.12.2.1}%
+\contentsline {section}{\numberline {8.13}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/sigusr1.c}{27}{section.8.13}%
+\contentsline {subsection}{\numberline {8.13.1}Opis szczegółowy}{27}{subsection.8.13.1}%
+\contentsline {subsection}{\numberline {8.13.2}Dokumentacja funkcji}{27}{subsection.8.13.2}%
+\contentsline {subsubsection}{\numberline {8.13.2.1}funkcja\_obslugujaca\_sigusr1()}{27}{subsubsection.8.13.2.1}%
+\contentsline {section}{\numberline {8.14}sigusr1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{28}{section.8.14}%
+\contentsline {section}{\numberline {8.15}Dokumentacja pliku C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/user/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/daemon/update\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Text\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File.c}{28}{section.8.15}%
+\contentsline {subsection}{\numberline {8.15.1}Opis szczegółowy}{28}{subsection.8.15.1}%
+\contentsline {subsection}{\numberline {8.15.2}Dokumentacja funkcji}{28}{subsection.8.15.2}%
+\contentsline {subsubsection}{\numberline {8.15.2.1}updateTextFile()}{29}{subsubsection.8.15.2.1}%
+\contentsline {subsubsection}{\numberline {8.15.2.2}updateTextFileParam()}{29}{subsubsection.8.15.2.2}%
+\contentsline {subsubsection}{\numberline {8.15.2.3}updateTextFileRecursive()}{29}{subsubsection.8.15.2.3}%
+\contentsline {subsubsection}{\numberline {8.15.2.4}updateTextFileRecursiveParam()}{30}{subsubsection.8.15.2.4}%
+\contentsline {section}{\numberline {8.16}update\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Text\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{30}{section.8.16}%
+\contentsline {chapter}{Skorowidz}{31}{section*.14}%

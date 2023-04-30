@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 #include "updateTextFile.h"
+/**
+ * @file
+ * @brief Usuwanie plików
+ *
+ * Plik sprawdzający czy podany plik lub katalog istnieje w folderze źródłowym, jeśli nie, jest usuwany.
+ */
 /**@brief
 *   Struktura przechowywująca wszystkie pliki które znajdują się w folderze źródłowym z uwzględnieniem podziału na foldery oraz pliki.
 */
@@ -24,8 +30,8 @@ typedef struct doesItExists {
 @param[in] dirPath
 *   scieżka folderu do usunięcia
 @param[in] iter
-*   służy do robienia wcięć w tekście
-@retval 1 Zwracane w przypadku błędu który możemy podejrzeć w errors.txt
+*   służy do robienia "wcięć" w tekście
+@retval 1 Zwraca błąd, jego szczegóły można sprawdzić w pliku errors.txt
 @retval checkFlag zmienna przechowywująca informacje czy wystąpił błąd
 */
 int deleteRecursive(const char* dirPath, int iter){

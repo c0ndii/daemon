@@ -7,10 +7,15 @@
 #include <unistd.h>
 #include <syslog.h>
 #include <string.h>
-
+/**
+ * @file
+ * @brief Tworzenie demona
+ *
+ * Plik posiadający funkcję która służy do tworzenia demona.
+ */
 
 /**@brief
-*   Funkcja tworząca demona
+*   Funkcja tworząca demona- tworzony jest proces potomny, następnie zabijany proces "rodzic". "Osierocony" proces staje się demonem.
 */
 void create_deamon()
 {
